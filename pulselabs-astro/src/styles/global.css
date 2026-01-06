@@ -119,7 +119,12 @@ body {
 .container {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 0 2rem;
+  width: 100%;
+}
+
+/* Ensure sections have minimum padding on all screen sizes */
+section {
+  min-width: 0;
 }
 
 /* Button Styles */
