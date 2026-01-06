@@ -1,4 +1,5 @@
 {
-  "buildCommand": "",
-  "outputDirectory": "."
+  "buildCommand": "cd pulselabs-astro && npm install && npm run build",
+  "outputDirectory": "pulselabs-astro/dist",
+  "cleanUrls": true
 }
