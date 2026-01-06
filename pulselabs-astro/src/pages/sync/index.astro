@@ -41,26 +41,8 @@ import Layout from '../../layouts/Layout.astro';
           </div>
         </div>
         <div class="flex justify-center">
-          <div class="phone-mockup">
-            <div class="phone-screen">
-              <div class="phone-notch"></div>
-              <!-- Calendar Screen Mockup -->
-              <div class="screen-content">
-                <div class="screen-header">January 2026</div>
-                <div class="calendar-grid">
-                  <div class="cal-day">S</div><div class="cal-day">M</div><div class="cal-day">T</div><div class="cal-day">W</div><div class="cal-day">T</div><div class="cal-day">F</div><div class="cal-day">S</div>
-                  <div class="cal-num"></div><div class="cal-num"></div><div class="cal-num"></div><div class="cal-num">1</div><div class="cal-num">2</div><div class="cal-num">3</div><div class="cal-num">4</div>
-                  <div class="cal-num period">5</div><div class="cal-num period">6</div><div class="cal-num period">7</div><div class="cal-num period">8</div><div class="cal-num">9</div><div class="cal-num">10</div><div class="cal-num">11</div>
-                  <div class="cal-num">12</div><div class="cal-num">13</div><div class="cal-num">14</div><div class="cal-num">15</div><div class="cal-num">16</div><div class="cal-num fertile">17</div><div class="cal-num fertile">18</div>
-                  <div class="cal-num peak">19</div><div class="cal-num peak">20</div><div class="cal-num fertile">21</div><div class="cal-num">22</div><div class="cal-num">23</div><div class="cal-num">24</div><div class="cal-num">25</div>
-                </div>
-                <div class="screen-legend">
-                  <span class="legend-item"><span class="dot period"></span>Period</span>
-                  <span class="legend-item"><span class="dot fertile"></span>Fertile</span>
-                  <span class="legend-item"><span class="dot peak"></span>Peak</span>
-                </div>
-              </div>
-            </div>
+          <div class="phone-frame">
+            <img src="/sync/screenshots/dashboard.png" alt="Sync Dashboard" class="phone-screenshot" />
           </div>
         </div>
       </div>
@@ -74,90 +56,21 @@ import Layout from '../../layouts/Layout.astro';
       <p class="text-[var(--text-medium)] text-center mb-12 max-w-xl mx-auto">A beautiful, intuitive interface designed for simplicity and privacy.</p>
 
       <div class="screenshot-gallery">
-        <!-- Calendar View -->
         <div class="screenshot-card">
-          <div class="mini-phone">
-            <div class="mini-screen">
-              <div class="mini-notch"></div>
-              <div class="mini-content calendar-demo">
-                <div class="mini-header">Calendar</div>
-                <div class="mini-calendar">
-                  <div class="mini-row">
-                    <span class="period-dot"></span>
-                    <span class="period-dot"></span>
-                    <span class="period-dot"></span>
-                    <span></span>
-                    <span></span>
-                  </div>
-                  <div class="mini-row">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                    <span class="fertile-dot"></span>
-                    <span class="peak-dot"></span>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
+          <img src="/sync/screenshots/welcome.png" alt="Sync Welcome" class="gallery-screenshot" />
+          <span class="screenshot-label">Choose Your Mode</span>
+        </div>
+        <div class="screenshot-card">
+          <img src="/sync/screenshots/dashboard.png" alt="Sync Dashboard" class="gallery-screenshot" />
           <span class="screenshot-label">Track Your Cycle</span>
         </div>
-
-        <!-- Peak Days View -->
         <div class="screenshot-card">
-          <div class="mini-phone">
-            <div class="mini-screen">
-              <div class="mini-notch"></div>
-              <div class="mini-content peak-demo">
-                <div class="peak-icon">🎯</div>
-                <div class="peak-text">Peak Day</div>
-                <div class="peak-subtext">Today</div>
-              </div>
-            </div>
-          </div>
-          <span class="screenshot-label">Know Your Peak</span>
+          <img src="/sync/screenshots/calendar.png" alt="Sync Calendar" class="gallery-screenshot" />
+          <span class="screenshot-label">View Hot Dates</span>
         </div>
-
-        <!-- Stats View -->
         <div class="screenshot-card">
-          <div class="mini-phone">
-            <div class="mini-screen">
-              <div class="mini-notch"></div>
-              <div class="mini-content stats-demo">
-                <div class="mini-header">Insights</div>
-                <div class="stat-row">
-                  <span class="stat-label">Avg. Cycle</span>
-                  <span class="stat-value">28 days</span>
-                </div>
-                <div class="stat-row">
-                  <span class="stat-label">Period Length</span>
-                  <span class="stat-value">5 days</span>
-                </div>
-                <div class="stat-row">
-                  <span class="stat-label">Next Period</span>
-                  <span class="stat-value">Jan 20</span>
-                </div>
-              </div>
-            </div>
-          </div>
-          <span class="screenshot-label">View Insights</span>
-        </div>
-
-        <!-- Privacy View -->
-        <div class="screenshot-card">
-          <div class="mini-phone">
-            <div class="mini-screen">
-              <div class="mini-notch"></div>
-              <div class="mini-content privacy-demo">
-                <div class="privacy-icon">🔒</div>
-                <div class="privacy-text">100% Private</div>
-                <div class="privacy-check">✓ No account</div>
-                <div class="privacy-check">✓ No cloud</div>
-                <div class="privacy-check">✓ No tracking</div>
-              </div>
-            </div>
-          </div>
-          <span class="screenshot-label">Total Privacy</span>
+          <img src="/sync/screenshots/settings.png" alt="Sync Settings" class="gallery-screenshot" />
+          <span class="screenshot-label">Pick Your Vibe</span>
         </div>
       </div>
     </div>
@@ -264,56 +177,24 @@ import Layout from '../../layouts/Layout.astro';
     color: var(--text-light);
   }
 
-  .phone-mockup {
+  .phone-frame {
     width: 280px;
-    height: 560px;
-    background: linear-gradient(180deg, #1A3A4A 0%, #0D1F28 100%);
     border-radius: 40px;
-    padding: 12px;
-    box-shadow: var(--shadow-lg), inset 0 0 0 3px rgba(255,255,255,0.1);
+    overflow: hidden;
+    box-shadow: var(--shadow-lg);
   }
 
-  .phone-screen {
+  .phone-screenshot {
     width: 100%;
-    height: 100%;
-    background: var(--bg-light);
-    border-radius: 32px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    position: relative;
+    height: auto;
+    display: block;
   }
 
-  .phone-notch {
-    position: absolute;
-    top: 8px;
-    width: 100px;
-    height: 28px;
-    background: #1A3A4A;
-    border-radius: 20px;
-  }
-
-  .phone-app-icon {
-    width: 100px;
-    height: 100px;
-    border-radius: 24px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  .gallery-screenshot {
+    width: 100%;
+    height: auto;
+    border-radius: 16px;
     box-shadow: var(--shadow-md);
-    margin-bottom: 1.5rem;
-  }
-
-  .phone-app-name {
-    font-size: 1.25rem;
-    font-weight: 700;
-    color: var(--text-dark);
-  }
-
-  .phone-app-tagline {
-    font-size: 0.9rem;
-    font-style: italic;
   }
 
   .feature-card {
@@ -367,93 +248,12 @@ import Layout from '../../layouts/Layout.astro';
     font-weight: 600;
   }
 
-  /* Hero Phone Screen Content */
-  .screen-content {
-    width: 100%;
-    height: 100%;
-    padding: 3rem 1rem 1rem;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .screen-header {
-    font-size: 1rem;
-    font-weight: 700;
-    color: var(--text-dark);
-    margin-bottom: 1rem;
-  }
-
-  .calendar-grid {
-    display: grid;
-    grid-template-columns: repeat(7, 1fr);
-    gap: 4px;
-    width: 100%;
-    max-width: 220px;
-  }
-
-  .cal-day {
-    font-size: 0.6rem;
-    font-weight: 600;
-    color: var(--text-light);
-    text-align: center;
-    padding: 4px;
-  }
-
-  .cal-num {
-    font-size: 0.7rem;
-    text-align: center;
-    padding: 6px 4px;
-    border-radius: 50%;
-    color: var(--text-medium);
-  }
-
-  .cal-num.period {
-    background: linear-gradient(135deg, var(--accent), var(--accent-light));
-    color: white;
-  }
-
-  .cal-num.fertile {
-    background: rgba(0, 180, 160, 0.15);
-    color: var(--primary);
-  }
-
-  .cal-num.peak {
-    background: linear-gradient(135deg, var(--primary), var(--primary-light));
-    color: white;
-    font-weight: 700;
-  }
-
-  .screen-legend {
-    display: flex;
-    gap: 1rem;
-    margin-top: 1rem;
-    font-size: 0.65rem;
-  }
-
-  .legend-item {
-    display: flex;
-    align-items: center;
-    gap: 4px;
-    color: var(--text-medium);
-  }
-
-  .dot {
-    width: 8px;
-    height: 8px;
-    border-radius: 50%;
-  }
-
-  .dot.period { background: var(--accent); }
-  .dot.fertile { background: rgba(0, 180, 160, 0.4); }
-  .dot.peak { background: var(--primary); }
-
   /* Screenshot Gallery */
   .screenshot-gallery {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 2rem;
-    max-width: 800px;
+    max-width: 900px;
     margin: 0 auto;
   }
 
@@ -474,142 +274,5 @@ import Layout from '../../layouts/Layout.astro';
     font-size: 0.9rem;
     font-weight: 600;
     color: var(--text-dark);
-  }
-
-  .mini-phone {
-    width: 140px;
-    height: 280px;
-    background: linear-gradient(180deg, #1A3A4A 0%, #0D1F28 100%);
-    border-radius: 24px;
-    padding: 6px;
-    box-shadow: var(--shadow-md);
-  }
-
-  .mini-screen {
-    width: 100%;
-    height: 100%;
-    background: var(--bg-light);
-    border-radius: 20px;
-    position: relative;
-    overflow: hidden;
-  }
-
-  .mini-notch {
-    position: absolute;
-    top: 4px;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 50px;
-    height: 14px;
-    background: #1A3A4A;
-    border-radius: 10px;
-  }
-
-  .mini-content {
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    padding: 1.5rem 0.75rem 0.75rem;
-  }
-
-  .mini-header {
-    font-size: 0.7rem;
-    font-weight: 700;
-    color: var(--text-dark);
-    margin-bottom: 0.75rem;
-  }
-
-  /* Calendar Demo */
-  .mini-calendar {
-    display: flex;
-    flex-direction: column;
-    gap: 6px;
-  }
-
-  .mini-row {
-    display: flex;
-    gap: 6px;
-  }
-
-  .mini-row span {
-    width: 16px;
-    height: 16px;
-    border-radius: 50%;
-    background: rgba(0, 180, 160, 0.1);
-  }
-
-  .period-dot { background: var(--accent) !important; }
-  .fertile-dot { background: rgba(0, 180, 160, 0.4) !important; }
-  .peak-dot { background: var(--primary) !important; }
-
-  /* Peak Demo */
-  .peak-demo {
-    background: linear-gradient(180deg, rgba(0, 180, 160, 0.1) 0%, var(--bg-light) 100%);
-  }
-
-  .peak-icon {
-    font-size: 2.5rem;
-    margin-bottom: 0.5rem;
-  }
-
-  .peak-text {
-    font-size: 1rem;
-    font-weight: 700;
-    color: var(--primary);
-  }
-
-  .peak-subtext {
-    font-size: 0.7rem;
-    color: var(--text-light);
-  }
-
-  /* Stats Demo */
-  .stats-demo {
-    justify-content: flex-start;
-    padding-top: 2rem;
-  }
-
-  .stat-row {
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    padding: 0.5rem 0;
-    border-bottom: 1px solid rgba(0, 180, 160, 0.1);
-  }
-
-  .stat-label {
-    font-size: 0.6rem;
-    color: var(--text-medium);
-  }
-
-  .stat-value {
-    font-size: 0.6rem;
-    font-weight: 700;
-    color: var(--primary);
-  }
-
-  /* Privacy Demo */
-  .privacy-demo {
-    background: linear-gradient(180deg, rgba(0, 180, 160, 0.05) 0%, var(--bg-light) 100%);
-  }
-
-  .privacy-icon {
-    font-size: 2rem;
-    margin-bottom: 0.5rem;
-  }
-
-  .privacy-text {
-    font-size: 0.8rem;
-    font-weight: 700;
-    color: var(--text-dark);
-    margin-bottom: 0.75rem;
-  }
-
-  .privacy-check {
-    font-size: 0.6rem;
-    color: var(--primary);
-    margin-bottom: 0.25rem;
   }
 </style>
