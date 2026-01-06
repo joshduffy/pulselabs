@@ -1,0 +1,209 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout title="Contact Us - PulseLab" description="Get in touch with the PulseLab team. We'd love to hear from you.">
+  <section class="pt-32 pb-16 px-8">
+    <div class="container max-w-2xl">
+      <span class="section-label">Get in Touch</span>
+      <h1 class="text-4xl md:text-5xl font-extrabold text-[var(--text-dark)] mb-4">Contact Us</h1>
+      <p class="text-lg text-[var(--text-medium)] mb-12">Have a question, suggestion, or just want to say hi? We'd love to hear from you.</p>
+
+      <div class="contact-grid">
+        <div class="contact-info">
+          <div class="contact-item">
+            <div class="contact-icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+                <polyline points="22,6 12,13 2,6"/>
+              </svg>
+            </div>
+            <div>
+              <h3>Email</h3>
+              <a href="mailto:hello@pulselab.cc">hello@pulselab.cc</a>
+            </div>
+          </div>
+
+          <div class="contact-item">
+            <div class="contact-icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="12" cy="12" r="10"/>
+                <line x1="2" y1="12" x2="22" y2="12"/>
+                <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/>
+              </svg>
+            </div>
+            <div>
+              <h3>Website</h3>
+              <a href="https://pulselab.cc">pulselab.cc</a>
+            </div>
+          </div>
+
+          <div class="response-note">
+            <p>We typically respond within 24-48 hours. For app support, please check our <a href="/faq/">FAQ</a> first — your question might already be answered!</p>
+          </div>
+        </div>
+
+        <form action="https://formspree.io/f/contact" method="POST" class="contact-form">
+          <div class="form-group">
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name" required />
+          </div>
+
+          <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" required />
+          </div>
+
+          <div class="form-group">
+            <label for="subject">Subject</label>
+            <select id="subject" name="subject" required>
+              <option value="">Select a topic...</option>
+              <option value="sync-support">Sync Support</option>
+              <option value="ember-support">Ember Support</option>
+              <option value="feedback">Feedback or Suggestion</option>
+              <option value="press">Press Inquiry</option>
+              <option value="partnership">Partnership</option>
+              <option value="other">Other</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="message">Message</label>
+            <textarea id="message" name="message" rows="5" required></textarea>
+          </div>
+
+          <button type="submit" class="btn btn-primary w-full">Send Message</button>
+        </form>
+      </div>
+    </div>
+  </section>
+</Layout>
+
+<style>
+  .contact-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+
+  @media (min-width: 768px) {
+    .contact-grid {
+      grid-template-columns: 1fr 1.5fr;
+    }
+  }
+
+  .contact-info {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+
+  .contact-item {
+    display: flex;
+    gap: 1rem;
+    align-items: flex-start;
+  }
+
+  .contact-icon {
+    width: 48px;
+    height: 48px;
+    background: var(--gradient-subtle);
+    border-radius: var(--radius-sm);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--primary);
+    flex-shrink: 0;
+  }
+
+  .contact-item h3 {
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: var(--text-light);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    margin-bottom: 0.25rem;
+  }
+
+  .contact-item a {
+    color: var(--text-dark);
+    text-decoration: none;
+    font-weight: 500;
+  }
+
+  .contact-item a:hover {
+    color: var(--primary);
+  }
+
+  .response-note {
+    background: var(--bg-light);
+    border-radius: var(--radius-sm);
+    padding: 1.25rem;
+    margin-top: 1rem;
+  }
+
+  .response-note p {
+    font-size: 0.9rem;
+    color: var(--text-medium);
+    line-height: 1.6;
+  }
+
+  .response-note a {
+    color: var(--primary);
+    text-decoration: none;
+  }
+
+  .response-note a:hover {
+    text-decoration: underline;
+  }
+
+  .contact-form {
+    background: white;
+    border-radius: var(--radius-md);
+    padding: 2rem;
+    border: 1px solid rgba(0, 180, 160, 0.1);
+  }
+
+  .form-group {
+    margin-bottom: 1.5rem;
+  }
+
+  .form-group label {
+    display: block;
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: var(--text-dark);
+    margin-bottom: 0.5rem;
+  }
+
+  .form-group input,
+  .form-group select,
+  .form-group textarea {
+    width: 100%;
+    padding: 0.875rem 1rem;
+    border: 2px solid rgba(0, 180, 160, 0.15);
+    border-radius: var(--radius-sm);
+    font-size: 1rem;
+    color: var(--text-dark);
+    background: var(--bg-light);
+    outline: none;
+    transition: border-color 0.2s;
+  }
+
+  .form-group input:focus,
+  .form-group select:focus,
+  .form-group textarea:focus {
+    border-color: var(--primary);
+    background: white;
+  }
+
+  .form-group textarea {
+    resize: vertical;
+    min-height: 120px;
+  }
+
+  .w-full {
+    width: 100%;
+    justify-content: center;
+  }
+</style>

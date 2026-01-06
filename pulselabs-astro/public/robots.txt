@@ -1,0 +1,11 @@
+# PulseLab Robots.txt
+# https://pulselab.cc
+
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://pulselab.cc/sitemap.xml
+
+# Disallow admin/internal paths (none currently)
+# Disallow: /admin/

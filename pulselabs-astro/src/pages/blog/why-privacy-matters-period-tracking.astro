@@ -1,0 +1,227 @@
+---
+import Layout from '../../layouts/Layout.astro';
+---
+
+<Layout
+  title="Why Privacy Matters for Period Tracking Apps - PulseLab"
+  description="Your cycle data is deeply personal. Here's why you should care about where it goes and who can access it."
+  type="article"
+  publishedDate="2026-01-04"
+  author="PulseLab Team"
+>
+  <article class="pt-32 pb-16 px-8">
+    <div class="container max-w-3xl">
+      <a href="/blog/" class="back-link">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M19 12H5M12 19l-7-7 7-7"/>
+        </svg>
+        Back to Blog
+      </a>
+
+      <div class="article-meta">
+        <span class="category">Privacy</span>
+        <span class="date">January 4, 2026</span>
+        <span class="read-time">6 min read</span>
+      </div>
+
+      <h1>Why Privacy Matters for Period Tracking Apps</h1>
+
+      <div class="article-content">
+        <p class="lead">Period tracking apps know some of the most intimate details about your life: your menstrual cycle, sexual activity, pregnancy attempts, and more. But where does all that data go?</p>
+
+        <h2>The Data You're Sharing</h2>
+        <p>When you use a typical period tracking app, you might be logging:</p>
+        <ul>
+          <li>Menstrual cycle dates and flow intensity</li>
+          <li>Sexual activity and contraception use</li>
+          <li>Pregnancy tests and fertility windows</li>
+          <li>Physical symptoms and moods</li>
+          <li>Medications and health conditions</li>
+        </ul>
+        <p>This is deeply personal health information. And unlike your medical records, it often isn't protected by healthcare privacy laws.</p>
+
+        <h2>Where Does Your Data Go?</h2>
+        <p>Many popular period tracking apps have been found to share data with third parties, including:</p>
+
+        <h3>Advertisers</h3>
+        <p>Some apps share data with advertising networks. This means your cycle information could be used to target you with ads — for pregnancy tests, baby products, or fertility services.</p>
+
+        <h3>Data Brokers</h3>
+        <p>Companies that buy and sell personal information for profit. Your menstrual data could end up in profiles sold to marketers, insurers, or employers.</p>
+
+        <h3>Social Media Platforms</h3>
+        <p>Integration with Facebook and other platforms means your data can flow to them, even if you just use social login.</p>
+
+        <h2>Real-World Consequences</h2>
+        <p>This isn't just theoretical. In 2021, the FTC took action against a popular period tracking app for sharing health data with marketing companies, despite promising users their data was private.</p>
+
+        <p>More concerning scenarios include:</p>
+        <ul>
+          <li><strong>Insurance implications:</strong> Health data could theoretically affect insurance rates or coverage</li>
+          <li><strong>Employment:</strong> Pregnancy-related data could be valuable to employers making hiring decisions</li>
+          <li><strong>Legal exposure:</strong> In some jurisdictions, cycle data has been sought in legal proceedings</li>
+          <li><strong>Relationship safety:</strong> Partners or family members accessing account data</li>
+        </ul>
+
+        <h2>The "Free" App Problem</h2>
+        <p>There's a saying in tech: "If you're not paying for the product, you are the product." Free apps need to make money somehow, and that often means monetizing your data.</p>
+
+        <p>Even apps that claim not to sell your data may:</p>
+        <ul>
+          <li>Share "anonymized" data that can be re-identified</li>
+          <li>Use your data for "research" with commercial partners</li>
+          <li>Change their privacy policy without meaningful notice</li>
+          <li>Be acquired by companies with different data practices</li>
+        </ul>
+
+        <h2>What Real Privacy Looks Like</h2>
+        <p>True privacy in a health app means:</p>
+
+        <p><strong>No servers:</strong> Your data should never leave your device. If there's no server, there's nothing to hack, subpoena, or sell.</p>
+
+        <p><strong>No accounts:</strong> No email, no login, no way to connect your data to your identity.</p>
+
+        <p><strong>No analytics:</strong> Even "anonymous" usage data can reveal patterns about you.</p>
+
+        <p><strong>No third-party code:</strong> Many apps include advertising SDKs and analytics tools that phone home constantly.</p>
+
+        <h2>Questions to Ask Before Downloading</h2>
+        <p>Before you trust an app with your health data, ask:</p>
+        <ol>
+          <li>Does this app require an account? Why?</li>
+          <li>Where is my data stored?</li>
+          <li>What third parties receive my data?</li>
+          <li>Can I export and delete all my data?</li>
+          <li>How does this app make money?</li>
+        </ol>
+
+        <div class="callout">
+          <h3>Privacy Without Compromise</h3>
+          <p>We built Sync because we believe you shouldn't have to choose between useful health tracking and privacy. Your data never leaves your device — we couldn't access it even if we wanted to.</p>
+          <a href="/sync/" class="btn btn-primary">Learn About Sync</a>
+        </div>
+
+        <h2>Taking Back Control</h2>
+        <p>The good news is you have choices. Apps that respect your privacy do exist. Look for:</p>
+        <ul>
+          <li>One-time purchase models (aligned incentives)</li>
+          <li>Offline-first functionality</li>
+          <li>No account requirements</li>
+          <li>Clear, readable privacy policies</li>
+          <li>Open about their data practices</li>
+        </ul>
+
+        <p>Your health data is yours. It's time we treated it that way.</p>
+      </div>
+    </div>
+  </article>
+</Layout>
+
+<style>
+  .back-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: var(--text-medium);
+    text-decoration: none;
+    margin-bottom: 2rem;
+    font-size: 0.95rem;
+  }
+
+  .back-link:hover {
+    color: var(--primary);
+  }
+
+  .article-meta {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1rem;
+    flex-wrap: wrap;
+  }
+
+  .category {
+    font-size: 0.75rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: var(--primary);
+    background: rgba(0, 180, 160, 0.1);
+    padding: 0.25rem 0.75rem;
+    border-radius: 9999px;
+  }
+
+  .date, .read-time {
+    font-size: 0.9rem;
+    color: var(--text-light);
+  }
+
+  h1 {
+    font-size: 2.5rem;
+    font-weight: 800;
+    color: var(--text-dark);
+    line-height: 1.2;
+    margin-bottom: 2rem;
+  }
+
+  .article-content {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: var(--text-medium);
+  }
+
+  .article-content .lead {
+    font-size: 1.25rem;
+    color: var(--text-dark);
+    margin-bottom: 2rem;
+  }
+
+  .article-content h2 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--text-dark);
+    margin-top: 2.5rem;
+    margin-bottom: 1rem;
+  }
+
+  .article-content h3 {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: var(--text-dark);
+    margin-top: 1.5rem;
+    margin-bottom: 0.75rem;
+  }
+
+  .article-content p {
+    margin-bottom: 1.25rem;
+  }
+
+  .article-content ul, .article-content ol {
+    margin-bottom: 1.25rem;
+    padding-left: 1.5rem;
+  }
+
+  .article-content li {
+    margin-bottom: 0.5rem;
+  }
+
+  .article-content strong {
+    color: var(--text-dark);
+  }
+
+  .callout {
+    background: var(--gradient-subtle);
+    border-radius: var(--radius-md);
+    padding: 2rem;
+    margin: 2rem 0;
+  }
+
+  .callout h3 {
+    color: var(--primary);
+    margin-top: 0;
+  }
+
+  .callout .btn {
+    margin-top: 1rem;
+  }
+</style>

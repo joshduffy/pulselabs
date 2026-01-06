@@ -177,6 +177,59 @@ import Layout from '../layouts/Layout.astro';
     </div>
   </section>
 
+  <!-- Testimonials Section -->
+  <section class="py-20 px-8 bg-white">
+    <div class="container">
+      <div class="text-center mb-12">
+        <span class="section-label">What Users Say</span>
+        <h2 class="section-title">Loved by People Who Value Privacy</h2>
+      </div>
+
+      <div class="testimonial-grid">
+        <div class="testimonial-card">
+          <div class="testimonial-stars">★★★★★</div>
+          <p class="testimonial-text">"Finally, an app that doesn't want my email, my data, or my money every month. Sync just works, and I know my data is safe."</p>
+          <div class="testimonial-author">
+            <span class="author-name">Sarah M.</span>
+            <span class="author-app">Sync User</span>
+          </div>
+        </div>
+
+        <div class="testimonial-card">
+          <div class="testimonial-stars">★★★★★</div>
+          <p class="testimonial-text">"Ember has been a game-changer for tracking my perimenopause symptoms. The doctor reports helped me have real conversations with my healthcare provider."</p>
+          <div class="testimonial-author">
+            <span class="author-name">Jennifer L.</span>
+            <span class="author-app">Ember User</span>
+          </div>
+        </div>
+
+        <div class="testimonial-card">
+          <div class="testimonial-stars">★★★★★</div>
+          <p class="testimonial-text">"After reading about data breaches with other apps, I switched to Sync. Peace of mind knowing my intimate data stays on my device."</p>
+          <div class="testimonial-author">
+            <span class="author-name">Michelle K.</span>
+            <span class="author-app">Sync User</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Newsletter Section -->
+  <section class="py-16 px-8 bg-[var(--bg-light)]">
+    <div class="container max-w-2xl text-center">
+      <h2 class="text-2xl font-bold text-[var(--text-dark)] mb-4">Stay in the Loop</h2>
+      <p class="text-[var(--text-medium)] mb-8">Get occasional updates about new features, health tips, and privacy news. No spam, ever.</p>
+
+      <form action="https://formspree.io/f/newsletter" method="POST" class="newsletter-form">
+        <input type="email" name="email" placeholder="your@email.com" required class="newsletter-input" />
+        <button type="submit" class="btn btn-primary">Subscribe</button>
+      </form>
+      <p class="newsletter-note">We respect your privacy. Unsubscribe anytime.</p>
+    </div>
+  </section>
+
   <!-- Trust Section -->
   <section class="py-20 px-8 bg-[var(--text-dark)] text-white">
     <div class="container text-center">
@@ -519,5 +572,85 @@ import Layout from '../layouts/Layout.astro';
   .trust-text {
     font-weight: 600;
     font-size: 1rem;
+  }
+
+  /* Testimonials */
+  .testimonial-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  @media (min-width: 768px) {
+    .testimonial-grid {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+
+  .testimonial-card {
+    background: var(--bg-light);
+    border-radius: var(--radius-md);
+    padding: 2rem;
+    text-align: left;
+  }
+
+  .testimonial-stars {
+    color: #F59E0B;
+    font-size: 1.25rem;
+    margin-bottom: 1rem;
+    letter-spacing: 2px;
+  }
+
+  .testimonial-text {
+    color: var(--text-medium);
+    font-size: 1rem;
+    line-height: 1.7;
+    margin-bottom: 1.5rem;
+    font-style: italic;
+  }
+
+  .testimonial-author {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+  }
+
+  .author-name {
+    font-weight: 600;
+    color: var(--text-dark);
+  }
+
+  .author-app {
+    font-size: 0.85rem;
+    color: var(--primary);
+  }
+
+  /* Newsletter */
+  .newsletter-form {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .newsletter-input {
+    padding: 1rem 1.5rem;
+    border-radius: 9999px;
+    border: 2px solid rgba(0, 180, 160, 0.2);
+    font-size: 1rem;
+    width: 100%;
+    max-width: 300px;
+    outline: none;
+    transition: border-color 0.2s;
+  }
+
+  .newsletter-input:focus {
+    border-color: var(--primary);
+  }
+
+  .newsletter-note {
+    font-size: 0.85rem;
+    color: var(--text-light);
+    margin-top: 1rem;
   }
 </style>
