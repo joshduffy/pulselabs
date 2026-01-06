@@ -1,0 +1,470 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sync by PulseLab - Find your peak.</title>
+  <meta name="description" content="A cycle tracker that predicts your peak days for intimacy. 100% private, works offline, no ads. Your data never leaves your device.">
+  <meta property="og:title" content="Sync by PulseLab">
+  <meta property="og:description" content="Find your peak. A cycle tracker that predicts your peak days for intimacy with complete privacy.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://pulselab.cc/sync">
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0%25' y1='0%25' x2='100%25' y2='100%25'%3E%3Cstop offset='0%25' stop-color='%2300B4A0'/%3E%3Cstop offset='100%25' stop-color='%23FF6B9D'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='100' height='100' rx='22' fill='url(%23g)'/%3E%3Cpath d='M15 50 L25 50 L35 50 L40 25 L50 75 L60 35 L65 50 L70 65 L80 25 L85 75 L90 50' stroke='white' stroke-width='6' stroke-linecap='round' stroke-linejoin='round' fill='none'/%3E%3C/svg%3E">
+  <style>
+    :root {
+      --primary: #00B4A0;
+      --primary-dark: #009688;
+      --accent: #FF6B9D;
+      --text: #1A3A4A;
+      --bg: #F0FFFE;
+      --card: #FFFFFF;
+      --muted: #5A8A9A;
+    }
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+    }
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+
+    /* Header */
+    header {
+      padding: 24px 0;
+      border-bottom: 1px solid rgba(0, 180, 160, 0.1);
+    }
+    .header-inner {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .logo {
+      font-size: 24px;
+      font-weight: 700;
+      color: var(--primary);
+      text-decoration: none;
+    }
+    .logo span {
+      color: var(--text);
+    }
+    .back-link {
+      color: var(--primary);
+      text-decoration: none;
+      font-weight: 500;
+    }
+    .back-link:hover {
+      text-decoration: underline;
+    }
+
+    /* Hero */
+    .hero {
+      padding: 80px 0 60px;
+      text-align: center;
+    }
+    .hero h1 {
+      font-size: clamp(2.5rem, 5vw, 3.5rem);
+      margin-bottom: 16px;
+      color: var(--text);
+    }
+    .tagline {
+      font-size: 1.5rem;
+      color: var(--accent);
+      font-style: italic;
+      margin-bottom: 24px;
+    }
+    .hero p {
+      font-size: 1.25rem;
+      max-width: 650px;
+      margin: 0 auto 40px;
+      color: var(--muted);
+    }
+
+    /* App Card */
+    .app-card {
+      background: var(--card);
+      border-radius: 24px;
+      padding: 48px;
+      max-width: 900px;
+      margin: 0 auto;
+      box-shadow: 0 8px 40px rgba(26, 58, 74, 0.08);
+    }
+    .app-header {
+      display: flex;
+      align-items: center;
+      gap: 24px;
+      margin-bottom: 32px;
+    }
+    .app-icon {
+      width: 120px;
+      height: 120px;
+      border-radius: 27px;
+      background: linear-gradient(135deg, var(--primary), var(--accent));
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      box-shadow: 0 8px 24px rgba(0, 180, 160, 0.3);
+    }
+    .app-icon svg {
+      width: 70px;
+      height: 70px;
+    }
+    .app-info h2 {
+      font-size: 2.5rem;
+      margin-bottom: 4px;
+      color: var(--text);
+    }
+    .app-info .subtitle {
+      color: var(--primary);
+      font-size: 1.2rem;
+      font-weight: 500;
+    }
+    .app-description {
+      font-size: 1.15rem;
+      margin-bottom: 32px;
+      color: var(--muted);
+      line-height: 1.8;
+    }
+
+    /* Features */
+    .features-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+      margin-bottom: 40px;
+    }
+    .feature {
+      display: flex;
+      align-items: flex-start;
+      gap: 16px;
+      padding: 20px;
+      background: var(--bg);
+      border-radius: 16px;
+    }
+    .feature-icon {
+      width: 44px;
+      height: 44px;
+      background: linear-gradient(135deg, var(--primary), var(--accent));
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      font-size: 20px;
+      flex-shrink: 0;
+    }
+    .feature-content h3 {
+      font-size: 1rem;
+      margin-bottom: 4px;
+      color: var(--text);
+    }
+    .feature-content p {
+      font-size: 0.9rem;
+      color: var(--muted);
+    }
+
+    /* CTA */
+    .cta-section {
+      text-align: center;
+      padding-top: 20px;
+    }
+    .price-tag {
+      display: inline-block;
+      background: linear-gradient(135deg, var(--primary), var(--accent));
+      color: white;
+      padding: 12px 28px;
+      border-radius: 24px;
+      font-weight: 600;
+      font-size: 1.2rem;
+      margin-bottom: 24px;
+    }
+    .app-store-btn {
+      display: inline-block;
+      transition: transform 0.2s;
+    }
+    .app-store-btn:hover {
+      transform: scale(1.05);
+    }
+    .app-store-btn img {
+      height: 60px;
+    }
+
+    /* Who It's For */
+    .audience-section {
+      padding: 80px 0;
+      text-align: center;
+    }
+    .audience-section h2 {
+      font-size: 2rem;
+      margin-bottom: 16px;
+      color: var(--text);
+    }
+    .audience-section > p {
+      max-width: 600px;
+      margin: 0 auto 40px;
+      color: var(--muted);
+      font-size: 1.1rem;
+    }
+    .audience-cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 24px;
+      max-width: 900px;
+      margin: 0 auto;
+    }
+    .audience-card {
+      background: var(--card);
+      padding: 32px;
+      border-radius: 20px;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.06);
+      text-align: left;
+    }
+    .audience-card h3 {
+      font-size: 1.25rem;
+      margin-bottom: 12px;
+      color: var(--primary);
+    }
+    .audience-card p {
+      color: var(--muted);
+    }
+
+    /* Privacy Section */
+    .privacy-section {
+      padding: 80px 0;
+      background: linear-gradient(180deg, var(--bg) 0%, #E0F7F5 100%);
+      text-align: center;
+    }
+    .privacy-section h2 {
+      font-size: 2rem;
+      margin-bottom: 16px;
+    }
+    .privacy-section > p {
+      max-width: 600px;
+      margin: 0 auto;
+      color: var(--muted);
+      font-size: 1.1rem;
+    }
+    .privacy-badges {
+      display: flex;
+      justify-content: center;
+      gap: 24px;
+      margin-top: 40px;
+      flex-wrap: wrap;
+    }
+    .badge {
+      background: var(--card);
+      padding: 24px 32px;
+      border-radius: 16px;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.06);
+    }
+    .badge-icon {
+      font-size: 2.5rem;
+      margin-bottom: 12px;
+    }
+    .badge-text {
+      font-weight: 600;
+      color: var(--text);
+    }
+
+    /* Footer */
+    footer {
+      padding: 40px 0;
+      border-top: 1px solid rgba(0, 180, 160, 0.1);
+      text-align: center;
+    }
+    .footer-links {
+      display: flex;
+      justify-content: center;
+      gap: 32px;
+      margin-bottom: 24px;
+      flex-wrap: wrap;
+    }
+    .footer-links a {
+      color: var(--primary);
+      text-decoration: none;
+      font-weight: 500;
+    }
+    .footer-links a:hover {
+      text-decoration: underline;
+    }
+    .copyright {
+      color: var(--muted);
+      font-size: 0.9rem;
+    }
+
+    @media (max-width: 600px) {
+      .app-header {
+        flex-direction: column;
+        text-align: center;
+      }
+      .app-card {
+        padding: 32px 24px;
+      }
+      .feature {
+        flex-direction: column;
+        text-align: center;
+        align-items: center;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container">
+      <div class="header-inner">
+        <a href="/" class="logo">Pulse<span>Lab</span></a>
+        <a href="/" class="back-link">&larr; All Apps</a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="container">
+        <h1>Sync</h1>
+        <div class="tagline">Find your peak.</div>
+        <p>A cycle tracker that predicts your peak days for intimacy. Beautiful, intuitive, and completely private.</p>
+      </div>
+    </section>
+
+    <section class="container">
+      <div class="app-card">
+        <div class="app-header">
+          <div class="app-icon">
+            <svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M8 32 L18 32 L22 32 L26 12 L30 52 L34 20 L36 32 L38 44 L42 12 L46 52 L50 32 L54 32 L56 32" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+              <circle cx="32" cy="32" r="4" fill="white"/>
+            </svg>
+          </div>
+          <div class="app-info">
+            <h2>Sync by PulseLab</h2>
+            <div class="subtitle">Cycle & Intimacy Tracking</div>
+          </div>
+        </div>
+
+        <p class="app-description">
+          Sync helps you understand your cycle and identify your most fertile days. Log your period, track symptoms, and let Sync predict when you're most likely to conceive. All without ever sharing your data with anyone.
+        </p>
+
+        <div class="features-grid">
+          <div class="feature">
+            <div class="feature-icon">📅</div>
+            <div class="feature-content">
+              <h3>Period Tracking</h3>
+              <p>Log your cycle with a simple, intuitive calendar interface.</p>
+            </div>
+          </div>
+          <div class="feature">
+            <div class="feature-icon">💕</div>
+            <div class="feature-content">
+              <h3>Peak Day Predictions</h3>
+              <p>Know your most fertile days for planning intimacy.</p>
+            </div>
+          </div>
+          <div class="feature">
+            <div class="feature-icon">📴</div>
+            <div class="feature-content">
+              <h3>Works Offline</h3>
+              <p>No internet required. Your data never leaves your device.</p>
+            </div>
+          </div>
+          <div class="feature">
+            <div class="feature-icon">🔒</div>
+            <div class="feature-content">
+              <h3>100% Private</h3>
+              <p>No accounts, no cloud, no tracking. Just you and your data.</p>
+            </div>
+          </div>
+          <div class="feature">
+            <div class="feature-icon">🚫</div>
+            <div class="feature-content">
+              <h3>No Ads Ever</h3>
+              <p>Pay once, use forever. No subscriptions, no interruptions.</p>
+            </div>
+          </div>
+          <div class="feature">
+            <div class="feature-icon">✨</div>
+            <div class="feature-content">
+              <h3>Beautiful Design</h3>
+              <p>A thoughtfully crafted interface that's a joy to use.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="cta-section">
+          <div class="price-tag">$1.99 - One Time</div>
+          <br><br>
+          <a href="https://apps.apple.com/app/id6757343793" class="app-store-btn">
+            <img src="https://developer.apple.com/assets/elements/badges/download-on-the-app-store.svg" alt="Download on the App Store">
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section class="audience-section">
+      <div class="container">
+        <h2>Perfect for</h2>
+        <p>Whether you're trying to conceive or just want to understand your body better, Sync is here to help.</p>
+
+        <div class="audience-cards">
+          <div class="audience-card">
+            <h3>Trying to Conceive</h3>
+            <p>Identify your fertile window and peak days to maximize your chances of getting pregnant.</p>
+          </div>
+          <div class="audience-card">
+            <h3>Cycle Awareness</h3>
+            <p>Understand your body's natural rhythm and predict when your next period will arrive.</p>
+          </div>
+          <div class="audience-card">
+            <h3>Privacy Conscious</h3>
+            <p>For those who want to track their cycle without their data ending up on corporate servers.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="privacy-section">
+      <div class="container">
+        <h2>Your cycle data stays yours</h2>
+        <p>In an age where period tracking apps sell your data to advertisers (and worse), Sync takes a different approach. We can't see your data because it never leaves your phone.</p>
+
+        <div class="privacy-badges">
+          <div class="badge">
+            <div class="badge-icon">📱</div>
+            <div class="badge-text">Stored on device</div>
+          </div>
+          <div class="badge">
+            <div class="badge-icon">🚫</div>
+            <div class="badge-text">No cloud uploads</div>
+          </div>
+          <div class="badge">
+            <div class="badge-icon">🙈</div>
+            <div class="badge-text">We can't see it</div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <div class="footer-links">
+        <a href="/sync/privacy">Privacy Policy</a>
+        <a href="/sync/support">Support</a>
+        <a href="mailto:hello@pulselab.cc">Contact</a>
+        <a href="/">PulseLab Home</a>
+      </div>
+      <p class="copyright">&copy; 2026 PulseLab. All rights reserved.</p>
+    </div>
+  </footer>
+</body>
+</html>

@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Support - Sync by PulseLab</title>
+  <meta name="description" content="Get help with Sync. FAQs, troubleshooting, and contact information.">
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0%25' y1='0%25' x2='100%25' y2='100%25'%3E%3Cstop offset='0%25' stop-color='%2300B4A0'/%3E%3Cstop offset='100%25' stop-color='%23FF6B9D'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='100' height='100' rx='22' fill='url(%23g)'/%3E%3Cpath d='M15 50 L25 50 L35 50 L40 25 L50 75 L60 35 L65 50 L70 65 L80 25 L85 75 L90 50' stroke='white' stroke-width='6' stroke-linecap='round' stroke-linejoin='round' fill='none'/%3E%3C/svg%3E">
+  <style>
+    :root {
+      --primary: #00B4A0;
+      --primary-dark: #009688;
+      --accent: #FF6B9D;
+      --text: #1A3A4A;
+      --bg: #F0FFFE;
+      --card: #FFFFFF;
+      --muted: #5A8A9A;
+    }
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.7;
+    }
+    .container {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+    header {
+      padding: 24px 0;
+      border-bottom: 1px solid rgba(0, 180, 160, 0.1);
+    }
+    .header-inner {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .logo {
+      font-size: 24px;
+      font-weight: 700;
+      color: var(--primary);
+      text-decoration: none;
+    }
+    .logo span {
+      color: var(--text);
+    }
+    .back-link {
+      color: var(--primary);
+      text-decoration: none;
+      font-weight: 500;
+    }
+    .back-link:hover {
+      text-decoration: underline;
+    }
+    main {
+      padding: 60px 0;
+    }
+    h1 {
+      font-size: 2.5rem;
+      margin-bottom: 8px;
+      color: var(--text);
+    }
+    .subtitle {
+      color: var(--primary);
+      font-size: 1.2rem;
+      margin-bottom: 40px;
+    }
+    .contact-card {
+      background: var(--card);
+      border-radius: 16px;
+      padding: 32px;
+      margin-bottom: 40px;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.06);
+      text-align: center;
+    }
+    .contact-card h2 {
+      font-size: 1.5rem;
+      margin-bottom: 12px;
+      color: var(--text);
+    }
+    .contact-card p {
+      color: var(--muted);
+      margin-bottom: 20px;
+    }
+    .contact-btn {
+      display: inline-block;
+      background: linear-gradient(135deg, var(--primary), var(--accent));
+      color: white;
+      padding: 14px 32px;
+      border-radius: 12px;
+      text-decoration: none;
+      font-weight: 600;
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+    .contact-btn:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 20px rgba(0, 180, 160, 0.3);
+    }
+    h2 {
+      font-size: 1.75rem;
+      margin-top: 48px;
+      margin-bottom: 24px;
+      color: var(--text);
+    }
+    .faq-item {
+      background: var(--card);
+      border-radius: 16px;
+      padding: 24px;
+      margin-bottom: 16px;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.06);
+    }
+    .faq-question {
+      font-weight: 600;
+      color: var(--text);
+      margin-bottom: 12px;
+      font-size: 1.1rem;
+    }
+    .faq-answer {
+      color: var(--muted);
+    }
+    .faq-answer a {
+      color: var(--primary);
+    }
+    .tips-section {
+      margin-top: 48px;
+    }
+    .tip-card {
+      background: var(--card);
+      border-radius: 16px;
+      padding: 24px;
+      margin-bottom: 16px;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.06);
+      display: flex;
+      gap: 20px;
+      align-items: flex-start;
+    }
+    .tip-icon {
+      width: 48px;
+      height: 48px;
+      background: linear-gradient(135deg, var(--primary), var(--accent));
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 24px;
+      flex-shrink: 0;
+    }
+    .tip-content h3 {
+      font-size: 1.1rem;
+      margin-bottom: 8px;
+      color: var(--text);
+    }
+    .tip-content p {
+      color: var(--muted);
+      margin: 0;
+    }
+    footer {
+      padding: 40px 0;
+      border-top: 1px solid rgba(0, 180, 160, 0.1);
+      text-align: center;
+    }
+    .footer-links {
+      display: flex;
+      justify-content: center;
+      gap: 32px;
+      margin-bottom: 24px;
+      flex-wrap: wrap;
+    }
+    .footer-links a {
+      color: var(--primary);
+      text-decoration: none;
+      font-weight: 500;
+    }
+    .footer-links a:hover {
+      text-decoration: underline;
+    }
+    .copyright {
+      color: var(--muted);
+      font-size: 0.9rem;
+    }
+    @media (max-width: 600px) {
+      .tip-card {
+        flex-direction: column;
+        text-align: center;
+        align-items: center;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container">
+      <div class="header-inner">
+        <a href="/" class="logo">Pulse<span>Lab</span></a>
+        <a href="/sync" class="back-link">&larr; Back to Sync</a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <div class="container">
+      <h1>Support</h1>
+      <div class="subtitle">Sync by PulseLab</div>
+
+      <div class="contact-card">
+        <h2>Need Help?</h2>
+        <p>We're here to help you get the most out of Sync. Send us an email and we'll get back to you as soon as possible.</p>
+        <a href="mailto:hello@pulselab.cc?subject=Sync%20Support" class="contact-btn">Email Support</a>
+      </div>
+
+      <h2>Frequently Asked Questions</h2>
+
+      <div class="faq-item">
+        <div class="faq-question">Is my cycle data private?</div>
+        <div class="faq-answer">Yes, completely. All your data is stored locally on your device and never transmitted to our servers. We literally cannot see your information. Read our <a href="/sync/privacy">Privacy Policy</a> for more details.</div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-question">Do I need to create an account?</div>
+        <div class="faq-answer">No. Sync works entirely without an account. This is part of our privacy-first design - no accounts means no personal information stored on servers.</div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-question">Does Sync work offline?</div>
+        <div class="faq-answer">Yes! Sync works completely offline. The app never needs an internet connection to function. Your data stays on your device at all times.</div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-question">How do I back up my data?</div>
+        <div class="faq-answer">Your Sync data is included in your iPhone backup (iCloud or local). When you restore your phone from a backup, your Sync data will be restored as well.</div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-question">How accurate are the predictions?</div>
+        <div class="faq-answer">Sync uses your logged cycle data to predict your fertile window and next period. The more cycles you log, the more accurate predictions become. However, please note that Sync is not a medical device and predictions should not be used as a form of birth control.</div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-question">Can I use Sync on multiple devices?</div>
+        <div class="faq-answer">Since Sync stores data locally and doesn't use cloud sync (for privacy), each device will have its own separate data. We recommend using Sync on your primary iPhone.</div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-question">Is there a subscription fee?</div>
+        <div class="faq-answer">No. Sync is a one-time purchase of $1.99. There are no subscriptions, no in-app purchases, and no ads. Pay once, use forever.</div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-question">How do I delete my data?</div>
+        <div class="faq-answer">You can delete individual entries within the app, use the reset option in Settings to clear all data, or simply delete the app from your device. Since we never have your data, deletion is immediate and permanent.</div>
+      </div>
+
+      <div class="tips-section">
+        <h2>Getting the Most from Sync</h2>
+
+        <div class="tip-card">
+          <div class="tip-icon">📅</div>
+          <div class="tip-content">
+            <h3>Log Consistently</h3>
+            <p>The more cycles you log, the more accurate your predictions become. Try to log the start and end of each period.</p>
+          </div>
+        </div>
+
+        <div class="tip-card">
+          <div class="tip-icon">🔔</div>
+          <div class="tip-content">
+            <h3>Enable Notifications</h3>
+            <p>Turn on notifications to get reminders about your upcoming period and fertile window.</p>
+          </div>
+        </div>
+
+        <div class="tip-card">
+          <div class="tip-icon">📝</div>
+          <div class="tip-content">
+            <h3>Add Notes</h3>
+            <p>Use the notes feature to track symptoms, moods, or anything else you want to remember about each day.</p>
+          </div>
+        </div>
+
+        <div class="tip-card">
+          <div class="tip-icon">💾</div>
+          <div class="tip-content">
+            <h3>Back Up Your Phone</h3>
+            <p>Regular iPhone backups (to iCloud or your computer) will preserve your Sync data if you ever need to restore your device.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <div class="container">
+      <div class="footer-links">
+        <a href="/sync">Sync</a>
+        <a href="/sync/privacy">Privacy Policy</a>
+        <a href="mailto:hello@pulselab.cc">Contact</a>
+        <a href="/">PulseLab Home</a>
+      </div>
+      <p class="copyright">&copy; 2026 PulseLab. All rights reserved.</p>
+    </div>
+  </footer>
+</body>
+</html>

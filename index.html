@@ -628,6 +628,71 @@
             font-style: italic;
         }
 
+        /* Ember-specific accent colors */
+        .product-showcase.ember {
+            margin-top: 4rem;
+        }
+
+        .product-showcase.ember .product-badge {
+            background: rgba(212, 88, 58, 0.1);
+            color: #D4583A;
+        }
+
+        .product-showcase.ember .product-tagline {
+            color: #E8A854;
+        }
+
+        .product-showcase.ember .btn-primary {
+            background: linear-gradient(135deg, #6B3A3A, #D4583A);
+            box-shadow: 0 4px 20px rgba(212, 88, 58, 0.35);
+        }
+
+        .product-showcase.ember .btn-primary:hover {
+            box-shadow: 0 8px 30px rgba(212, 88, 58, 0.45);
+        }
+
+        .product-showcase.ember .product-features .check {
+            background: linear-gradient(135deg, #D4583A, #E8A854);
+        }
+
+        .product-showcase.ember .price-tag {
+            color: #D4583A;
+        }
+
+        .product-showcase.ember .phone-mockup {
+            background: linear-gradient(180deg, #6B3A3A 0%, #2A1215 100%);
+        }
+
+        .product-showcase.ember .phone-app-icon {
+            background: linear-gradient(135deg, #6B3A3A, #D4583A);
+        }
+
+        .product-showcase.ember .phone-app-tagline {
+            color: #E8A854;
+        }
+
+        .product-showcase.ember::before {
+            background: radial-gradient(circle, rgba(212, 88, 58, 0.08) 0%, transparent 70%);
+        }
+
+        /* Reversed layout for visual variety */
+        .product-showcase.reversed {
+            grid-template-columns: 1fr 1.2fr;
+        }
+
+        .product-showcase.reversed .product-visual {
+            order: -1;
+        }
+
+        @media (max-width: 900px) {
+            .product-showcase.reversed {
+                grid-template-columns: 1fr;
+            }
+            .product-showcase.reversed .product-visual {
+                order: 0;
+            }
+        }
+
         /* ============================================
            TRUST SECTION
            ============================================ */
@@ -801,6 +866,7 @@
         <ul class="nav-links">
             <li><a href="#philosophy">Philosophy</a></li>
             <li><a href="#products">Products</a></li>
+            <li><a href="/ember">Ember</a></li>
             <li><a href="mailto:hello@pulselab.cc">Contact</a></li>
         </ul>
     </nav>
@@ -928,7 +994,7 @@
                     </ul>
 
                     <div class="product-cta">
-                        <a href="https://sync.pulselab.cc" class="btn btn-primary">Learn More</a>
+                        <a href="/sync" class="btn btn-primary">Learn More</a>
                         <div class="price-tag">$1.99 <span>one time</span></div>
                     </div>
                 </div>
@@ -945,6 +1011,56 @@
                             </div>
                             <div class="phone-app-name">Sync</div>
                             <div class="phone-app-tagline">Find your peak.</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Ember Product Showcase -->
+            <div class="product-showcase ember reversed">
+                <div class="product-info">
+                    <span class="product-badge">Available on iOS</span>
+                    <h3 class="product-name">Ember</h3>
+                    <p class="product-tagline">Your body, illuminated.</p>
+                    <p class="product-description">
+                        Track perimenopause and menopause symptoms. Discover patterns in your health data.
+                        Generate reports for your healthcare provider — all without sharing a single byte.
+                    </p>
+
+                    <ul class="product-features">
+                        <li>
+                            <span class="check">✓</span>
+                            Track 20+ symptoms with pattern discovery
+                        </li>
+                        <li>
+                            <span class="check">✓</span>
+                            Generate PDF reports for your doctor
+                        </li>
+                        <li>
+                            <span class="check">✓</span>
+                            Sync with Apple Health &amp; Apple Watch
+                        </li>
+                        <li>
+                            <span class="check">✓</span>
+                            100% private — all data stays on device
+                        </li>
+                    </ul>
+
+                    <div class="product-cta">
+                        <a href="/ember" class="btn btn-primary">Learn More</a>
+                        <div class="price-tag">$9.99 <span>one time</span></div>
+                    </div>
+                </div>
+
+                <div class="product-visual">
+                    <div class="phone-mockup">
+                        <div class="phone-screen">
+                            <div class="phone-notch"></div>
+                            <div class="phone-app-icon" style="background: none; box-shadow: none;">
+                                <img src="/ember/icon.png" alt="Ember" style="width: 100%; height: 100%; border-radius: 24px;">
+                            </div>
+                            <div class="phone-app-name">Ember</div>
+                            <div class="phone-app-tagline">Your body, illuminated.</div>
                         </div>
                     </div>
                 </div>
@@ -1012,7 +1128,8 @@
             <div class="footer-links">
                 <h4>Products</h4>
                 <ul>
-                    <li><a href="https://sync.pulselab.cc">Sync</a></li>
+                    <li><a href="/sync">Sync</a></li>
+                    <li><a href="/ember">Ember</a></li>
                 </ul>
             </div>
 
@@ -1020,14 +1137,14 @@
                 <h4>Company</h4>
                 <ul>
                     <li><a href="mailto:hello@pulselab.cc">Contact</a></li>
-                    <li><a href="https://sync.pulselab.cc/privacy">Privacy Policy</a></li>
-                    <li><a href="https://sync.pulselab.cc/support">Support</a></li>
+                    <li><a href="/sync/privacy">Privacy Policy</a></li>
+                    <li><a href="/sync/support">Support</a></li>
                 </ul>
             </div>
         </div>
 
         <div class="footer-bottom">
-            <p>&copy; 2025 PulseLab. All rights reserved.</p>
+            <p>&copy; 2026 PulseLab. All rights reserved.</p>
             <p>Made with <span class="footer-heart">♥</span> for your privacy</p>
         </div>
     </footer>

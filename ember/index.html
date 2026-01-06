@@ -1,0 +1,708 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ember by PulseLab - Your body, illuminated.</title>
+  <meta name="description" content="Track perimenopause and menopause symptoms. Discover patterns in your health data. Privacy-first hormone health tracking.">
+  <meta property="og:title" content="Ember by PulseLab">
+  <meta property="og:description" content="Your body, illuminated. Track perimenopause and menopause symptoms with complete privacy.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://pulselab.cc/ember">
+  <link rel="icon" type="image/png" href="/ember/icon.png">
+  <style>
+    :root {
+      --primary: #D4583A;
+      --primary-dark: #6B3A3A;
+      --accent: #E8A854;
+      --text: #2D2926;
+      --bg: #FDF8F5;
+      --card: #FFFFFF;
+      --muted: #78716C;
+    }
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+    }
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+
+    /* Header */
+    header {
+      padding: 24px 0;
+      border-bottom: 1px solid rgba(107, 58, 58, 0.1);
+    }
+    .header-inner {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .logo {
+      font-size: 24px;
+      font-weight: 700;
+      color: var(--primary);
+      text-decoration: none;
+    }
+    .logo span {
+      color: var(--text);
+    }
+    .back-link {
+      color: var(--primary);
+      text-decoration: none;
+      font-weight: 500;
+    }
+    .back-link:hover {
+      text-decoration: underline;
+    }
+
+    /* Hero with Phone */
+    .hero {
+      padding: 60px 0 80px;
+      background: linear-gradient(180deg, var(--bg) 0%, #F5E6DD 100%);
+    }
+    .hero-content {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 60px;
+      align-items: center;
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+    .hero-text {
+      padding-right: 20px;
+    }
+    .hero-text h1 {
+      font-size: clamp(2.5rem, 5vw, 3.5rem);
+      margin-bottom: 16px;
+      color: var(--text);
+    }
+    .tagline {
+      font-size: 1.5rem;
+      color: var(--accent);
+      font-style: italic;
+      margin-bottom: 24px;
+    }
+    .hero-text p {
+      font-size: 1.2rem;
+      color: var(--muted);
+      margin-bottom: 32px;
+      line-height: 1.7;
+    }
+    .hero-cta {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+    .price-tag {
+      display: inline-block;
+      background: var(--primary);
+      color: white;
+      padding: 12px 24px;
+      border-radius: 24px;
+      font-weight: 600;
+      font-size: 1.1rem;
+    }
+    .app-store-btn {
+      display: inline-block;
+      transition: transform 0.2s;
+    }
+    .app-store-btn:hover {
+      transform: scale(1.05);
+    }
+    .app-store-btn img {
+      height: 54px;
+    }
+
+    /* Hero Phone */
+    .hero-phone {
+      display: flex;
+      justify-content: center;
+    }
+    .phone-frame-large {
+      width: 300px;
+      height: 620px;
+      background: linear-gradient(180deg, #2D2926 0%, #1a1715 100%);
+      border-radius: 48px;
+      padding: 12px;
+      box-shadow: 0 30px 80px rgba(45, 41, 38, 0.3);
+      position: relative;
+    }
+    .phone-frame-large::before {
+      content: '';
+      position: absolute;
+      top: 16px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 100px;
+      height: 32px;
+      background: #1a1715;
+      border-radius: 16px;
+      z-index: 10;
+    }
+    .phone-screen-large {
+      width: 100%;
+      height: 100%;
+      border-radius: 38px;
+      overflow: hidden;
+      background: var(--bg);
+    }
+    .phone-screen-large img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: top;
+    }
+
+    /* App Info Section */
+    .app-info-section {
+      padding: 80px 0;
+    }
+    .app-card {
+      background: var(--card);
+      border-radius: 24px;
+      padding: 48px;
+      max-width: 900px;
+      margin: 0 auto;
+      box-shadow: 0 8px 40px rgba(45, 41, 38, 0.08);
+    }
+    .app-header {
+      display: flex;
+      align-items: center;
+      gap: 24px;
+      margin-bottom: 32px;
+    }
+    .app-icon {
+      width: 100px;
+      height: 100px;
+      border-radius: 22px;
+      overflow: hidden;
+      flex-shrink: 0;
+      box-shadow: 0 8px 24px rgba(212, 88, 58, 0.3);
+    }
+    .app-icon img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    .app-info h2 {
+      font-size: 2rem;
+      margin-bottom: 4px;
+      color: var(--text);
+    }
+    .app-info .subtitle {
+      color: var(--primary);
+      font-size: 1.1rem;
+      font-weight: 500;
+    }
+    .app-description {
+      font-size: 1.1rem;
+      margin-bottom: 32px;
+      color: var(--muted);
+      line-height: 1.8;
+    }
+
+    /* Features */
+    .features-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+    }
+    .feature {
+      display: flex;
+      align-items: flex-start;
+      gap: 16px;
+      padding: 20px;
+      background: var(--bg);
+      border-radius: 16px;
+    }
+    .feature-icon {
+      width: 44px;
+      height: 44px;
+      background: linear-gradient(135deg, var(--primary), var(--accent));
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      font-size: 20px;
+      flex-shrink: 0;
+    }
+    .feature-content h3 {
+      font-size: 1rem;
+      margin-bottom: 4px;
+      color: var(--text);
+    }
+    .feature-content p {
+      font-size: 0.9rem;
+      color: var(--muted);
+    }
+
+    /* Screenshot Gallery */
+    .screenshots-section {
+      padding: 80px 0;
+      text-align: center;
+      overflow: hidden;
+    }
+    .screenshots-section h2 {
+      font-size: 2rem;
+      margin-bottom: 16px;
+      color: var(--text);
+    }
+    .screenshots-section > .container > p {
+      max-width: 600px;
+      margin: 0 auto 48px;
+      color: var(--muted);
+      font-size: 1.1rem;
+    }
+    .screenshot-gallery {
+      display: flex;
+      gap: 32px;
+      justify-content: center;
+      flex-wrap: wrap;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+    .screenshot-item {
+      flex: 0 0 auto;
+      text-align: center;
+    }
+    .phone-frame {
+      width: 240px;
+      height: 500px;
+      background: linear-gradient(180deg, #2D2926 0%, #1a1715 100%);
+      border-radius: 40px;
+      padding: 10px;
+      box-shadow: 0 20px 60px rgba(45, 41, 38, 0.25);
+      position: relative;
+    }
+    .phone-frame::before {
+      content: '';
+      position: absolute;
+      top: 14px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 80px;
+      height: 26px;
+      background: #1a1715;
+      border-radius: 13px;
+      z-index: 10;
+    }
+    .phone-screen {
+      width: 100%;
+      height: 100%;
+      border-radius: 32px;
+      overflow: hidden;
+      background: var(--bg);
+    }
+    .phone-screen img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: top;
+    }
+    .screenshot-label {
+      margin-top: 20px;
+      font-weight: 600;
+      color: var(--text);
+      font-size: 1rem;
+    }
+    .screenshot-sublabel {
+      color: var(--muted);
+      font-size: 0.9rem;
+      margin-top: 4px;
+    }
+
+    /* Who It's For */
+    .audience-section {
+      padding: 80px 0;
+      text-align: center;
+    }
+    .audience-section h2 {
+      font-size: 2rem;
+      margin-bottom: 16px;
+      color: var(--text);
+    }
+    .audience-section > .container > p {
+      max-width: 600px;
+      margin: 0 auto 40px;
+      color: var(--muted);
+      font-size: 1.1rem;
+    }
+    .audience-cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 24px;
+      max-width: 900px;
+      margin: 0 auto;
+    }
+    .audience-card {
+      background: var(--card);
+      padding: 32px;
+      border-radius: 20px;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.06);
+      text-align: left;
+    }
+    .audience-card h3 {
+      font-size: 1.25rem;
+      margin-bottom: 12px;
+      color: var(--primary);
+    }
+    .audience-card p {
+      color: var(--muted);
+    }
+
+    /* Privacy Section */
+    .privacy-section {
+      padding: 80px 0;
+      background: linear-gradient(180deg, var(--bg) 0%, #F5E6DD 100%);
+      text-align: center;
+    }
+    .privacy-section h2 {
+      font-size: 2rem;
+      margin-bottom: 16px;
+    }
+    .privacy-section > .container > p {
+      max-width: 600px;
+      margin: 0 auto;
+      color: var(--muted);
+      font-size: 1.1rem;
+    }
+    .privacy-badges {
+      display: flex;
+      justify-content: center;
+      gap: 24px;
+      margin-top: 40px;
+      flex-wrap: wrap;
+    }
+    .badge {
+      background: var(--card);
+      padding: 24px 32px;
+      border-radius: 16px;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.06);
+    }
+    .badge-icon {
+      font-size: 2.5rem;
+      margin-bottom: 12px;
+    }
+    .badge-text {
+      font-weight: 600;
+      color: var(--text);
+    }
+
+    /* Footer */
+    footer {
+      padding: 40px 0;
+      border-top: 1px solid rgba(107, 58, 58, 0.1);
+      text-align: center;
+    }
+    .footer-links {
+      display: flex;
+      justify-content: center;
+      gap: 32px;
+      margin-bottom: 24px;
+      flex-wrap: wrap;
+    }
+    .footer-links a {
+      color: var(--primary);
+      text-decoration: none;
+      font-weight: 500;
+    }
+    .footer-links a:hover {
+      text-decoration: underline;
+    }
+    .copyright {
+      color: var(--muted);
+      font-size: 0.9rem;
+    }
+
+    @media (max-width: 900px) {
+      .hero-content {
+        grid-template-columns: 1fr;
+        gap: 40px;
+        text-align: center;
+      }
+      .hero-text {
+        padding-right: 0;
+        order: 2;
+      }
+      .hero-phone {
+        order: 1;
+      }
+      .hero-cta {
+        justify-content: center;
+      }
+      .phone-frame-large {
+        width: 260px;
+        height: 540px;
+      }
+      .screenshot-gallery {
+        gap: 24px;
+      }
+      .phone-frame {
+        width: 200px;
+        height: 420px;
+        border-radius: 32px;
+      }
+      .phone-frame::before {
+        width: 70px;
+        height: 22px;
+        top: 12px;
+      }
+      .phone-screen {
+        border-radius: 26px;
+      }
+    }
+
+    @media (max-width: 600px) {
+      .app-header {
+        flex-direction: column;
+        text-align: center;
+      }
+      .app-card {
+        padding: 32px 24px;
+      }
+      .feature {
+        flex-direction: column;
+        text-align: center;
+        align-items: center;
+      }
+      .phone-frame-large {
+        width: 220px;
+        height: 460px;
+        border-radius: 36px;
+      }
+      .phone-frame-large::before {
+        width: 80px;
+        height: 26px;
+      }
+      .phone-screen-large {
+        border-radius: 28px;
+      }
+      .screenshot-gallery {
+        gap: 20px;
+      }
+      .phone-frame {
+        width: 160px;
+        height: 340px;
+        border-radius: 28px;
+        padding: 8px;
+      }
+      .phone-frame::before {
+        width: 55px;
+        height: 18px;
+        top: 10px;
+        border-radius: 9px;
+      }
+      .phone-screen {
+        border-radius: 22px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container">
+      <div class="header-inner">
+        <a href="/" class="logo">Pulse<span>Lab</span></a>
+        <a href="/" class="back-link">&larr; All Apps</a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="container">
+        <div class="hero-content">
+          <div class="hero-text">
+            <h1>Ember</h1>
+            <div class="tagline">Your body, illuminated.</div>
+            <p>Track perimenopause and menopause symptoms. Discover patterns in your health data. Generate reports for your healthcare provider.</p>
+            <div class="hero-cta">
+              <span class="price-tag">$9.99 Launch Special</span>
+              <a href="https://apps.apple.com/app/id6757404972" class="app-store-btn">
+                <img src="https://developer.apple.com/assets/elements/badges/download-on-the-app-store.svg" alt="Download on the App Store">
+              </a>
+            </div>
+          </div>
+          <div class="hero-phone">
+            <div class="phone-frame-large">
+              <div class="phone-screen-large">
+                <img src="/ember/screenshots/home.png" alt="Ember Home Screen">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="app-info-section">
+      <div class="container">
+        <div class="app-card">
+          <div class="app-header">
+            <div class="app-icon">
+              <img src="/ember/icon.png" alt="Ember App Icon">
+            </div>
+            <div class="app-info">
+              <h2>Ember by PulseLab</h2>
+              <div class="subtitle">Hormone Health Tracking</div>
+            </div>
+          </div>
+
+          <p class="app-description">
+            Ember helps women navigate perimenopause and menopause by illuminating patterns in their symptoms and health data. Track hot flashes, sleep disruptions, mood changes, and more. Your symptoms aren't random—Ember helps you see the connections.
+          </p>
+
+          <div class="features-grid">
+            <div class="feature">
+              <div class="feature-icon">📊</div>
+              <div class="feature-content">
+                <h3>Pattern Discovery</h3>
+                <p>Uncover connections between your symptoms, sleep, and lifestyle.</p>
+              </div>
+            </div>
+            <div class="feature">
+              <div class="feature-icon">📋</div>
+              <div class="feature-content">
+                <h3>Doctor Reports</h3>
+                <p>Generate PDF reports to share with your healthcare provider.</p>
+              </div>
+            </div>
+            <div class="feature">
+              <div class="feature-icon">⌚</div>
+              <div class="feature-content">
+                <h3>Apple Health Sync</h3>
+                <p>Integrate sleep, heart rate, and HRV data from your Apple Watch.</p>
+              </div>
+            </div>
+            <div class="feature">
+              <div class="feature-icon">🔒</div>
+              <div class="feature-content">
+                <h3>Privacy First</h3>
+                <p>All data stays on your device. No accounts. No cloud. No tracking.</p>
+              </div>
+            </div>
+            <div class="feature">
+              <div class="feature-icon">🌡️</div>
+              <div class="feature-content">
+                <h3>20+ Symptoms</h3>
+                <p>Track hot flashes, night sweats, brain fog, mood changes, and more.</p>
+              </div>
+            </div>
+            <div class="feature">
+              <div class="feature-icon">🔐</div>
+              <div class="feature-content">
+                <h3>Biometric Lock</h3>
+                <p>Secure your private health data with Face ID or Touch ID.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="screenshots-section">
+      <div class="container">
+        <h2>See Ember in action</h2>
+        <p>A thoughtfully designed interface that makes tracking your symptoms simple and insightful.</p>
+      </div>
+      <div class="screenshot-gallery">
+        <div class="screenshot-item">
+          <div class="phone-frame">
+            <div class="phone-screen">
+              <img src="/ember/screenshots/daily-log.png" alt="Daily Log">
+            </div>
+          </div>
+          <div class="screenshot-label">Daily Log</div>
+          <div class="screenshot-sublabel">Track mood & symptoms</div>
+        </div>
+        <div class="screenshot-item">
+          <div class="phone-frame">
+            <div class="phone-screen">
+              <img src="/ember/screenshots/insights.png" alt="Insights">
+            </div>
+          </div>
+          <div class="screenshot-label">Insights</div>
+          <div class="screenshot-sublabel">Discover patterns</div>
+        </div>
+        <div class="screenshot-item">
+          <div class="phone-frame">
+            <div class="phone-screen">
+              <img src="/ember/screenshots/doctor-report.png" alt="Doctor Report">
+            </div>
+          </div>
+          <div class="screenshot-label">Doctor Reports</div>
+          <div class="screenshot-sublabel">Export for your provider</div>
+        </div>
+      </div>
+    </section>
+
+    <section class="audience-section">
+      <div class="container">
+        <h2>Built for real life</h2>
+        <p>Ember was created for women who deserve to understand their changing bodies—not just survive them.</p>
+
+        <div class="audience-cards">
+          <div class="audience-card">
+            <h3>Perimenopause</h3>
+            <p>Experiencing new symptoms? Track changes as they happen and share patterns with your doctor.</p>
+          </div>
+          <div class="audience-card">
+            <h3>Menopause</h3>
+            <p>Managing ongoing symptoms? See what triggers them and what helps—backed by your own data.</p>
+          </div>
+          <div class="audience-card">
+            <h3>HRT Monitoring</h3>
+            <p>On hormone therapy? Track how treatments affect your symptoms over time.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="privacy-section">
+      <div class="container">
+        <h2>Your health data stays yours</h2>
+        <p>We believe your most personal health information should never leave your device. That's why Ember stores everything locally—we literally can't see your data.</p>
+
+        <div class="privacy-badges">
+          <div class="badge">
+            <div class="badge-icon">📱</div>
+            <div class="badge-text">Stored on device</div>
+          </div>
+          <div class="badge">
+            <div class="badge-icon">🚫</div>
+            <div class="badge-text">No cloud uploads</div>
+          </div>
+          <div class="badge">
+            <div class="badge-icon">🙈</div>
+            <div class="badge-text">We can't see it</div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <div class="footer-links">
+        <a href="/ember/privacy">Privacy Policy</a>
+        <a href="/ember/support">Support</a>
+        <a href="mailto:hello@pulselab.cc">Contact</a>
+        <a href="/">PulseLab Home</a>
+      </div>
+      <p class="copyright">&copy; 2026 PulseLab. All rights reserved.</p>
+    </div>
+  </footer>
+</body>
+</html>

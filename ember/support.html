@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Support - Ember by PulseLab</title>
+  <meta name="description" content="Get help with Ember. FAQs, troubleshooting, and contact information.">
+  <link rel="icon" type="image/png" href="/favicon.png">
+  <style>
+    :root {
+      --primary: #D4583A;
+      --primary-dark: #6B3A3A;
+      --accent: #E8A854;
+      --text: #2D2926;
+      --bg: #FDF8F5;
+      --card: #FFFFFF;
+      --muted: #78716C;
+    }
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.7;
+    }
+    .container {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+    header {
+      padding: 24px 0;
+      border-bottom: 1px solid rgba(107, 58, 58, 0.1);
+    }
+    .header-inner {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .logo {
+      font-size: 24px;
+      font-weight: 700;
+      color: var(--primary);
+      text-decoration: none;
+    }
+    .logo span {
+      color: var(--text);
+    }
+    .back-link {
+      color: var(--primary);
+      text-decoration: none;
+      font-weight: 500;
+    }
+    .back-link:hover {
+      text-decoration: underline;
+    }
+    main {
+      padding: 60px 0;
+    }
+    h1 {
+      font-size: 2.5rem;
+      margin-bottom: 8px;
+      color: var(--text);
+    }
+    .subtitle {
+      color: var(--primary);
+      font-size: 1.2rem;
+      margin-bottom: 40px;
+    }
+    .contact-card {
+      background: var(--card);
+      border-radius: 16px;
+      padding: 32px;
+      margin-bottom: 40px;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.06);
+      text-align: center;
+    }
+    .contact-card h2 {
+      font-size: 1.5rem;
+      margin-bottom: 12px;
+      color: var(--text);
+    }
+    .contact-card p {
+      color: var(--muted);
+      margin-bottom: 20px;
+    }
+    .contact-btn {
+      display: inline-block;
+      background: var(--primary);
+      color: white;
+      padding: 14px 32px;
+      border-radius: 12px;
+      text-decoration: none;
+      font-weight: 600;
+      transition: background 0.2s;
+    }
+    .contact-btn:hover {
+      background: var(--primary-dark);
+    }
+    h2 {
+      font-size: 1.75rem;
+      margin-top: 48px;
+      margin-bottom: 24px;
+      color: var(--text);
+    }
+    .faq-item {
+      background: var(--card);
+      border-radius: 16px;
+      padding: 24px;
+      margin-bottom: 16px;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.06);
+    }
+    .faq-question {
+      font-weight: 600;
+      color: var(--text);
+      margin-bottom: 12px;
+      font-size: 1.1rem;
+    }
+    .faq-answer {
+      color: var(--muted);
+    }
+    .faq-answer a {
+      color: var(--primary);
+    }
+    .tips-section {
+      margin-top: 48px;
+    }
+    .tip-card {
+      background: var(--card);
+      border-radius: 16px;
+      padding: 24px;
+      margin-bottom: 16px;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.06);
+      display: flex;
+      gap: 20px;
+      align-items: flex-start;
+    }
+    .tip-icon {
+      width: 48px;
+      height: 48px;
+      background: linear-gradient(135deg, var(--primary), var(--accent));
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 24px;
+      flex-shrink: 0;
+    }
+    .tip-content h3 {
+      font-size: 1.1rem;
+      margin-bottom: 8px;
+      color: var(--text);
+    }
+    .tip-content p {
+      color: var(--muted);
+      margin: 0;
+    }
+    footer {
+      padding: 40px 0;
+      border-top: 1px solid rgba(107, 58, 58, 0.1);
+      text-align: center;
+    }
+    .footer-links {
+      display: flex;
+      justify-content: center;
+      gap: 32px;
+      margin-bottom: 24px;
+      flex-wrap: wrap;
+    }
+    .footer-links a {
+      color: var(--primary);
+      text-decoration: none;
+      font-weight: 500;
+    }
+    .footer-links a:hover {
+      text-decoration: underline;
+    }
+    .copyright {
+      color: var(--muted);
+      font-size: 0.9rem;
+    }
+    @media (max-width: 600px) {
+      .tip-card {
+        flex-direction: column;
+        text-align: center;
+        align-items: center;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container">
+      <div class="header-inner">
+        <a href="/" class="logo">Pulse<span>Lab</span></a>
+        <a href="/ember" class="back-link">&larr; Back to Ember</a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <div class="container">
+      <h1>Support</h1>
+      <div class="subtitle">Ember by PulseLab</div>
+
+      <div class="contact-card">
+        <h2>Need Help?</h2>
+        <p>We're here to help you get the most out of Ember. Send us an email and we'll get back to you as soon as possible.</p>
+        <a href="mailto:hello@pulselab.cc?subject=Ember%20Support" class="contact-btn">Email Support</a>
+      </div>
+
+      <h2>Frequently Asked Questions</h2>
+
+      <div class="faq-item">
+        <div class="faq-question">Is my health data private?</div>
+        <div class="faq-answer">Yes, completely. All your data is stored locally on your device and never transmitted to our servers. We literally cannot see your health information. Read our <a href="/ember/privacy">Privacy Policy</a> for more details.</div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-question">Do I need to create an account?</div>
+        <div class="faq-answer">No. Ember works entirely without an account. This is part of our privacy-first design - no accounts means no personal information stored on servers.</div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-question">How do I back up my data?</div>
+        <div class="faq-answer">Your Ember data is included in your iPhone backup (iCloud or local). When you restore your phone from a backup, your Ember data will be restored as well. You can also export PDF reports to save your symptom history.</div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-question">Can I use Ember on multiple devices?</div>
+        <div class="faq-answer">Since Ember stores data locally and doesn't use cloud sync (for privacy), each device will have its own separate data. We recommend using Ember on your primary iPhone.</div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-question">How does Apple Health integration work?</div>
+        <div class="faq-answer">When you enable Apple Health integration, Ember can read your sleep, heart rate, and HRV data to help identify correlations with your symptoms. This data is processed entirely on your device and never sent anywhere.</div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-question">What symptoms can I track?</div>
+        <div class="faq-answer">Ember supports 20+ perimenopause and menopause symptoms including hot flashes, night sweats, sleep disruptions, mood changes, brain fog, anxiety, joint pain, headaches, and more. You can also add custom notes to any entry.</div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-question">How do I share reports with my doctor?</div>
+        <div class="faq-answer">Go to the Reports tab, select a date range, and generate a PDF. You can then share it via email, AirDrop, print it, or save it to Files. The report is created on your device and you control how it's shared.</div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-question">Is Ember free?</div>
+        <div class="faq-answer">Yes, Ember is completely free with no in-app purchases or subscriptions. We believe every woman deserves access to quality health tracking tools.</div>
+      </div>
+
+      <div class="tips-section">
+        <h2>Getting the Most from Ember</h2>
+
+        <div class="tip-card">
+          <div class="tip-icon">📝</div>
+          <div class="tip-content">
+            <h3>Track Consistently</h3>
+            <p>Try to log symptoms at the same times each day. Consistent tracking helps Ember identify patterns more accurately.</p>
+          </div>
+        </div>
+
+        <div class="tip-card">
+          <div class="tip-icon">⌚</div>
+          <div class="tip-content">
+            <h3>Enable Apple Health</h3>
+            <p>If you have an Apple Watch, enabling Health integration provides richer insights about how your sleep and activity relate to symptoms.</p>
+          </div>
+        </div>
+
+        <div class="tip-card">
+          <div class="tip-icon">📋</div>
+          <div class="tip-content">
+            <h3>Prepare for Doctor Visits</h3>
+            <p>Generate a report before your healthcare appointments. Having objective data helps facilitate better conversations about your care.</p>
+          </div>
+        </div>
+
+        <div class="tip-card">
+          <div class="tip-icon">🔐</div>
+          <div class="tip-content">
+            <h3>Enable Biometric Lock</h3>
+            <p>For extra privacy, enable Face ID or Touch ID in Settings to protect your health data from others who might use your phone.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <div class="container">
+      <div class="footer-links">
+        <a href="/ember">Ember</a>
+        <a href="/ember/privacy">Privacy Policy</a>
+        <a href="mailto:hello@pulselab.cc">Contact</a>
+        <a href="/">PulseLab Home</a>
+      </div>
+      <p class="copyright">&copy; 2026 PulseLab. All rights reserved.</p>
+    </div>
+  </footer>
+</body>
+</html>
