@@ -1,0 +1,228 @@
+---
+import Layout from '../../layouts/Layout.astro';
+---
+
+<Layout title="Privacy Policy - Ember by PulseLab" description="Ember Privacy Policy. Your health data stays on your device. We never collect, store, or share your personal information.">
+  <section class="pt-32 pb-8 px-8 bg-[var(--ember-bg)]">
+    <div class="container max-w-3xl mx-auto">
+      <a href="/ember" class="inline-flex items-center gap-2 text-[var(--ember-primary)] mb-6 hover:underline">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M19 12H5M12 19l-7-7 7-7"/>
+        </svg>
+        Back to Ember
+      </a>
+      <h1 class="text-4xl font-extrabold text-[var(--ember-text)] mb-2">Privacy Policy</h1>
+      <p class="text-xl text-[var(--ember-primary)]">Ember by PulseLab</p>
+    </div>
+  </section>
+
+  <section class="py-8 px-8">
+    <div class="container max-w-3xl mx-auto">
+      <div class="highlight-box ember-highlight mb-10">
+        <p class="text-lg text-[var(--text-dark)]">
+          <strong>The short version:</strong> Ember stores all your data locally on your device. We never collect, transmit, or have access to your personal health information. Period.
+        </p>
+      </div>
+
+      <div class="prose">
+        <h2>Our Privacy Philosophy</h2>
+        <p>
+          We built Ember with a simple principle: your health data is deeply personal and should never leave your device unless you explicitly choose to share it. We designed the app so that we literally cannot access your data - it's not stored on our servers because we don't have servers that store user data.
+        </p>
+
+        <h2>Data We Collect</h2>
+        <div class="data-table ember-table">
+          <div class="data-row">
+            <div class="data-label">Personal Information</div>
+            <div class="data-value"><span class="badge ember-badge">None</span></div>
+          </div>
+          <div class="data-row">
+            <div class="data-label">Health Data</div>
+            <div class="data-value"><span class="badge ember-badge">None</span> - stored on device only</div>
+          </div>
+          <div class="data-row">
+            <div class="data-label">Usage Analytics</div>
+            <div class="data-value"><span class="badge ember-badge">None</span></div>
+          </div>
+          <div class="data-row">
+            <div class="data-label">Advertising Data</div>
+            <div class="data-value"><span class="badge ember-badge">None</span></div>
+          </div>
+          <div class="data-row">
+            <div class="data-label">Account Information</div>
+            <div class="data-value"><span class="badge ember-badge">None</span> - no account required</div>
+          </div>
+        </div>
+
+        <h2>Data Stored on Your Device</h2>
+        <p>Ember stores the following data locally on your iPhone:</p>
+        <ul>
+          <li>Symptom entries you log (type, severity, timing, notes)</li>
+          <li>Any triggers or lifestyle factors you record</li>
+          <li>Your app preferences and settings</li>
+          <li>Generated insights based on your symptom patterns</li>
+        </ul>
+        <p>This data never leaves your device unless you choose to export it (such as generating a PDF report for your healthcare provider).</p>
+
+        <h2>Apple Health Integration</h2>
+        <p>If you choose to enable Apple Health integration, Ember can read:</p>
+        <ul>
+          <li>Sleep data</li>
+          <li>Heart rate and heart rate variability (HRV)</li>
+          <li>Activity and exercise data</li>
+        </ul>
+        <p>This data is read directly from Apple Health on your device. It is never transmitted to PulseLab or any third party. Apple Health data is processed locally to provide you with insights about how your symptoms may correlate with your sleep, activity, and other health metrics.</p>
+
+        <h2>PDF Reports</h2>
+        <p>When you generate a PDF report for your healthcare provider, the report is created entirely on your device. You control how you share it - via email, AirDrop, or any other method you choose. We never see or receive these reports.</p>
+
+        <h2>Biometric Security</h2>
+        <p>Ember supports Face ID and Touch ID to protect your private health data. Biometric data is handled entirely by Apple's secure enclave and is never accessible to Ember or PulseLab.</p>
+
+        <h2>Third-Party Services</h2>
+        <p>Ember does not use any third-party analytics, advertising, or tracking services. The app does not contain any SDKs that collect user data.</p>
+
+        <h2>Data Deletion</h2>
+        <p>Since all data is stored locally on your device, you have complete control. To delete your data:</p>
+        <ul>
+          <li>Delete individual entries within the app</li>
+          <li>Use the "Clear All Data" option in Settings</li>
+          <li>Delete the app from your device</li>
+        </ul>
+        <p>Once deleted, data cannot be recovered because we don't have any backup of your information.</p>
+
+        <h2>Children's Privacy</h2>
+        <p>Ember is not intended for use by children under 13. We do not knowingly collect any information from children.</p>
+
+        <h2>Changes to This Policy</h2>
+        <p>If we make changes to this privacy policy, we will update this page and note the date of the last revision below. Our commitment to not collecting your data will not change.</p>
+
+        <h2>Contact Us</h2>
+        <p>If you have questions about this privacy policy or Ember's privacy practices, please contact us at:</p>
+        <p><a href="mailto:hello@pulselab.cc" class="ember-link">hello@pulselab.cc</a></p>
+
+        <div class="last-updated ember-updated">
+          Last updated: January 2026
+        </div>
+      </div>
+    </div>
+  </section>
+</Layout>
+
+<style>
+  .highlight-box {
+    background: white;
+    border-left: 4px solid var(--primary);
+    padding: 1.5rem;
+    border-radius: 0 0.75rem 0.75rem 0;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.06);
+  }
+
+  .ember-highlight {
+    border-left-color: var(--ember-primary);
+  }
+
+  .prose {
+    color: var(--text-medium);
+    line-height: 1.8;
+  }
+
+  .prose h2 {
+    color: var(--ember-primary-dark);
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-top: 2.5rem;
+    margin-bottom: 1rem;
+  }
+
+  .prose p {
+    margin-bottom: 1rem;
+  }
+
+  .prose ul {
+    margin-bottom: 1rem;
+    padding-left: 1.5rem;
+  }
+
+  .prose li {
+    margin-bottom: 0.5rem;
+  }
+
+  .prose a {
+    color: var(--ember-primary);
+    text-decoration: underline;
+  }
+
+  .prose a:hover {
+    color: var(--ember-primary-dark);
+  }
+
+  .data-table {
+    background: white;
+    border-radius: 0.75rem;
+    overflow: hidden;
+    margin: 1.5rem 0;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.06);
+  }
+
+  .ember-table .data-row {
+    border-bottom-color: rgba(107, 58, 58, 0.1);
+  }
+
+  .data-row {
+    display: flex;
+    padding: 1rem 1.25rem;
+    border-bottom: 1px solid rgba(0, 180, 160, 0.1);
+  }
+
+  .data-row:last-child {
+    border-bottom: none;
+  }
+
+  .data-label {
+    font-weight: 600;
+    color: var(--text-dark);
+    width: 200px;
+    flex-shrink: 0;
+  }
+
+  .data-value {
+    color: var(--text-medium);
+  }
+
+  .badge {
+    display: inline-block;
+    background: var(--primary);
+    color: white;
+    padding: 0.25rem 0.75rem;
+    border-radius: 9999px;
+    font-size: 0.85rem;
+    font-weight: 500;
+  }
+
+  .ember-badge {
+    background: #7A9E8E;
+  }
+
+  .last-updated {
+    color: var(--text-light);
+    font-size: 0.9rem;
+    margin-top: 2.5rem;
+    padding-top: 1.25rem;
+    border-top: 1px solid rgba(0, 180, 160, 0.1);
+  }
+
+  .ember-updated {
+    border-top-color: rgba(107, 58, 58, 0.1);
+  }
+
+  @media (max-width: 600px) {
+    .data-row {
+      flex-direction: column;
+      gap: 0.5rem;
+    }
+    .data-label {
+      width: auto;
+    }
+  }
+</style>

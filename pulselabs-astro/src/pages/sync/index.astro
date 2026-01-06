@@ -1,0 +1,605 @@
+---
+import Layout from '../../layouts/Layout.astro';
+---
+
+<Layout title="Sync by PulseLab - Find your peak." description="A cycle tracker that predicts your peak days for intimacy. 100% private, works offline, no ads. Your data never leaves your device.">
+  <section class="pt-32 pb-16 px-8">
+    <div class="container">
+      <div class="grid md:grid-cols-2 gap-12 items-center">
+        <div>
+          <a href="/" class="inline-flex items-center gap-2 text-[var(--text-medium)] mb-6 hover:text-[var(--primary)]">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M19 12H5M12 19l-7-7 7-7"/>
+            </svg>
+            Back to All Apps
+          </a>
+          <span class="section-label">Cycle Tracker</span>
+          <h1 class="text-4xl md:text-5xl font-extrabold text-[var(--text-dark)] mb-4">Sync</h1>
+          <p class="text-2xl text-[var(--accent)] italic mb-6">Find your peak.</p>
+          <p class="text-lg text-[var(--text-medium)] mb-8">
+            A cycle tracker that predicts your peak days for intimacy — and never shares
+            a byte of your data. Beautiful, intuitive, and completely private.
+          </p>
+          <div class="flex items-center gap-4 flex-wrap mb-8">
+            <a href="https://apps.apple.com/app/id6757343793" class="btn btn-primary" target="_blank" rel="noopener">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.81-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/>
+              </svg>
+              Download on App Store
+            </a>
+            <div class="price-tag">$1.99 <span>one time</span></div>
+          </div>
+        </div>
+        <div class="flex justify-center">
+          <div class="phone-mockup">
+            <div class="phone-screen">
+              <div class="phone-notch"></div>
+              <!-- Calendar Screen Mockup -->
+              <div class="screen-content">
+                <div class="screen-header">January 2026</div>
+                <div class="calendar-grid">
+                  <div class="cal-day">S</div><div class="cal-day">M</div><div class="cal-day">T</div><div class="cal-day">W</div><div class="cal-day">T</div><div class="cal-day">F</div><div class="cal-day">S</div>
+                  <div class="cal-num"></div><div class="cal-num"></div><div class="cal-num"></div><div class="cal-num">1</div><div class="cal-num">2</div><div class="cal-num">3</div><div class="cal-num">4</div>
+                  <div class="cal-num period">5</div><div class="cal-num period">6</div><div class="cal-num period">7</div><div class="cal-num period">8</div><div class="cal-num">9</div><div class="cal-num">10</div><div class="cal-num">11</div>
+                  <div class="cal-num">12</div><div class="cal-num">13</div><div class="cal-num">14</div><div class="cal-num">15</div><div class="cal-num">16</div><div class="cal-num fertile">17</div><div class="cal-num fertile">18</div>
+                  <div class="cal-num peak">19</div><div class="cal-num peak">20</div><div class="cal-num fertile">21</div><div class="cal-num">22</div><div class="cal-num">23</div><div class="cal-num">24</div><div class="cal-num">25</div>
+                </div>
+                <div class="screen-legend">
+                  <span class="legend-item"><span class="dot period"></span>Period</span>
+                  <span class="legend-item"><span class="dot fertile"></span>Fertile</span>
+                  <span class="legend-item"><span class="dot peak"></span>Peak</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- App Screenshots Gallery -->
+  <section class="py-16 px-8 bg-white">
+    <div class="container">
+      <h2 class="text-2xl font-bold text-[var(--text-dark)] mb-4 text-center">See It In Action</h2>
+      <p class="text-[var(--text-medium)] text-center mb-12 max-w-xl mx-auto">A beautiful, intuitive interface designed for simplicity and privacy.</p>
+
+      <div class="screenshot-gallery">
+        <!-- Calendar View -->
+        <div class="screenshot-card">
+          <div class="mini-phone">
+            <div class="mini-screen">
+              <div class="mini-notch"></div>
+              <div class="mini-content calendar-demo">
+                <div class="mini-header">Calendar</div>
+                <div class="mini-calendar">
+                  <div class="mini-row">
+                    <span class="period-dot"></span>
+                    <span class="period-dot"></span>
+                    <span class="period-dot"></span>
+                    <span></span>
+                    <span></span>
+                  </div>
+                  <div class="mini-row">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span class="fertile-dot"></span>
+                    <span class="peak-dot"></span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <span class="screenshot-label">Track Your Cycle</span>
+        </div>
+
+        <!-- Peak Days View -->
+        <div class="screenshot-card">
+          <div class="mini-phone">
+            <div class="mini-screen">
+              <div class="mini-notch"></div>
+              <div class="mini-content peak-demo">
+                <div class="peak-icon">🎯</div>
+                <div class="peak-text">Peak Day</div>
+                <div class="peak-subtext">Today</div>
+              </div>
+            </div>
+          </div>
+          <span class="screenshot-label">Know Your Peak</span>
+        </div>
+
+        <!-- Stats View -->
+        <div class="screenshot-card">
+          <div class="mini-phone">
+            <div class="mini-screen">
+              <div class="mini-notch"></div>
+              <div class="mini-content stats-demo">
+                <div class="mini-header">Insights</div>
+                <div class="stat-row">
+                  <span class="stat-label">Avg. Cycle</span>
+                  <span class="stat-value">28 days</span>
+                </div>
+                <div class="stat-row">
+                  <span class="stat-label">Period Length</span>
+                  <span class="stat-value">5 days</span>
+                </div>
+                <div class="stat-row">
+                  <span class="stat-label">Next Period</span>
+                  <span class="stat-value">Jan 20</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <span class="screenshot-label">View Insights</span>
+        </div>
+
+        <!-- Privacy View -->
+        <div class="screenshot-card">
+          <div class="mini-phone">
+            <div class="mini-screen">
+              <div class="mini-notch"></div>
+              <div class="mini-content privacy-demo">
+                <div class="privacy-icon">🔒</div>
+                <div class="privacy-text">100% Private</div>
+                <div class="privacy-check">✓ No account</div>
+                <div class="privacy-check">✓ No cloud</div>
+                <div class="privacy-check">✓ No tracking</div>
+              </div>
+            </div>
+          </div>
+          <span class="screenshot-label">Total Privacy</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="py-16 px-8 bg-[var(--bg-light)]">
+    <div class="container">
+      <h2 class="text-2xl font-bold text-[var(--text-dark)] mb-8 text-center">Features</h2>
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div class="feature-card">
+          <div class="feature-icon">📅</div>
+          <h3>Period Tracking</h3>
+          <p>Log your cycle with a beautiful calendar interface. Track start dates, end dates, and flow intensity.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">🎯</div>
+          <h3>Peak Day Predictions</h3>
+          <p>Scientifically-based predictions for your fertile window and peak days for intimacy.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">📴</div>
+          <h3>Works Offline</h3>
+          <p>No internet required. Works perfectly in airplane mode, remote locations, or anywhere.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">🔒</div>
+          <h3>100% Private</h3>
+          <p>All data stays on your device. No accounts, no cloud, no tracking. We can't see your data.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">🚫</div>
+          <h3>No Ads Ever</h3>
+          <p>One-time purchase means no ads, no in-app purchases, no premium tiers. Yours forever.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">✨</div>
+          <h3>Beautiful Design</h3>
+          <p>Thoughtfully crafted interface with personality modes to match your style.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="py-16 px-8 bg-[var(--bg-light)]">
+    <div class="container">
+      <h2 class="text-2xl font-bold text-[var(--text-dark)] mb-8 text-center">Who Is Sync For?</h2>
+      <div class="grid md:grid-cols-3 gap-6">
+        <div class="audience-card">
+          <h3>Trying to Conceive</h3>
+          <p>Identify your fertile window and peak days to maximize your chances of conception.</p>
+        </div>
+        <div class="audience-card">
+          <h3>Cycle Awareness</h3>
+          <p>Understand your body's natural rhythm without sharing your intimate data with corporations.</p>
+        </div>
+        <div class="audience-card">
+          <h3>Privacy Conscious</h3>
+          <p>Track your cycle without worrying about data breaches, advertisers, or third parties.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="py-16 px-8 bg-[var(--text-dark)] text-white">
+    <div class="container text-center">
+      <h2 class="text-2xl font-bold mb-4">Your Data. Your Device. Period.</h2>
+      <div class="flex justify-center gap-8 mt-8 flex-wrap">
+        <div class="privacy-badge">
+          <span class="text-3xl mb-2">👁️‍🗨️</span>
+          <span>We can't see your data</span>
+        </div>
+        <div class="privacy-badge">
+          <span class="text-3xl mb-2">🚫</span>
+          <span>We can't sell your data</span>
+        </div>
+        <div class="privacy-badge">
+          <span class="text-3xl mb-2">🔐</span>
+          <span>We never have your data</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="py-16 px-8 bg-white">
+    <div class="container text-center">
+      <h2 class="text-2xl font-bold text-[var(--text-dark)] mb-4">Ready to Find Your Peak?</h2>
+      <p class="text-[var(--text-medium)] mb-8">Download Sync and take control of your cycle — privately.</p>
+      <a href="https://apps.apple.com/app/id6757343793" class="btn btn-primary" target="_blank" rel="noopener">
+        Download for $1.99
+      </a>
+    </div>
+  </section>
+</Layout>
+
+<style>
+  .price-tag {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--primary);
+  }
+  .price-tag span {
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: var(--text-light);
+  }
+
+  .phone-mockup {
+    width: 280px;
+    height: 560px;
+    background: linear-gradient(180deg, #1A3A4A 0%, #0D1F28 100%);
+    border-radius: 40px;
+    padding: 12px;
+    box-shadow: var(--shadow-lg), inset 0 0 0 3px rgba(255,255,255,0.1);
+  }
+
+  .phone-screen {
+    width: 100%;
+    height: 100%;
+    background: var(--bg-light);
+    border-radius: 32px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+  }
+
+  .phone-notch {
+    position: absolute;
+    top: 8px;
+    width: 100px;
+    height: 28px;
+    background: #1A3A4A;
+    border-radius: 20px;
+  }
+
+  .phone-app-icon {
+    width: 100px;
+    height: 100px;
+    border-radius: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: var(--shadow-md);
+    margin-bottom: 1.5rem;
+  }
+
+  .phone-app-name {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: var(--text-dark);
+  }
+
+  .phone-app-tagline {
+    font-size: 0.9rem;
+    font-style: italic;
+  }
+
+  .feature-card {
+    background: var(--bg-light);
+    border-radius: var(--radius-md);
+    padding: 2rem;
+    text-align: center;
+  }
+
+  .feature-icon {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+  }
+
+  .feature-card h3 {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: var(--text-dark);
+    margin-bottom: 0.5rem;
+  }
+
+  .feature-card p {
+    color: var(--text-medium);
+    font-size: 0.95rem;
+  }
+
+  .audience-card {
+    background: white;
+    border-radius: var(--radius-md);
+    padding: 2rem;
+    text-align: center;
+    border: 1px solid rgba(0,180,160,0.1);
+  }
+
+  .audience-card h3 {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: var(--text-dark);
+    margin-bottom: 0.5rem;
+  }
+
+  .audience-card p {
+    color: var(--text-medium);
+    font-size: 0.95rem;
+  }
+
+  .privacy-badge {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-weight: 600;
+  }
+
+  /* Hero Phone Screen Content */
+  .screen-content {
+    width: 100%;
+    height: 100%;
+    padding: 3rem 1rem 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .screen-header {
+    font-size: 1rem;
+    font-weight: 700;
+    color: var(--text-dark);
+    margin-bottom: 1rem;
+  }
+
+  .calendar-grid {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 4px;
+    width: 100%;
+    max-width: 220px;
+  }
+
+  .cal-day {
+    font-size: 0.6rem;
+    font-weight: 600;
+    color: var(--text-light);
+    text-align: center;
+    padding: 4px;
+  }
+
+  .cal-num {
+    font-size: 0.7rem;
+    text-align: center;
+    padding: 6px 4px;
+    border-radius: 50%;
+    color: var(--text-medium);
+  }
+
+  .cal-num.period {
+    background: linear-gradient(135deg, var(--accent), var(--accent-light));
+    color: white;
+  }
+
+  .cal-num.fertile {
+    background: rgba(0, 180, 160, 0.15);
+    color: var(--primary);
+  }
+
+  .cal-num.peak {
+    background: linear-gradient(135deg, var(--primary), var(--primary-light));
+    color: white;
+    font-weight: 700;
+  }
+
+  .screen-legend {
+    display: flex;
+    gap: 1rem;
+    margin-top: 1rem;
+    font-size: 0.65rem;
+  }
+
+  .legend-item {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    color: var(--text-medium);
+  }
+
+  .dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+  }
+
+  .dot.period { background: var(--accent); }
+  .dot.fertile { background: rgba(0, 180, 160, 0.4); }
+  .dot.peak { background: var(--primary); }
+
+  /* Screenshot Gallery */
+  .screenshot-gallery {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+    max-width: 800px;
+    margin: 0 auto;
+  }
+
+  @media (min-width: 768px) {
+    .screenshot-gallery {
+      grid-template-columns: repeat(4, 1fr);
+    }
+  }
+
+  .screenshot-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  .screenshot-label {
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: var(--text-dark);
+  }
+
+  .mini-phone {
+    width: 140px;
+    height: 280px;
+    background: linear-gradient(180deg, #1A3A4A 0%, #0D1F28 100%);
+    border-radius: 24px;
+    padding: 6px;
+    box-shadow: var(--shadow-md);
+  }
+
+  .mini-screen {
+    width: 100%;
+    height: 100%;
+    background: var(--bg-light);
+    border-radius: 20px;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .mini-notch {
+    position: absolute;
+    top: 4px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 50px;
+    height: 14px;
+    background: #1A3A4A;
+    border-radius: 10px;
+  }
+
+  .mini-content {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 1.5rem 0.75rem 0.75rem;
+  }
+
+  .mini-header {
+    font-size: 0.7rem;
+    font-weight: 700;
+    color: var(--text-dark);
+    margin-bottom: 0.75rem;
+  }
+
+  /* Calendar Demo */
+  .mini-calendar {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+  }
+
+  .mini-row {
+    display: flex;
+    gap: 6px;
+  }
+
+  .mini-row span {
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    background: rgba(0, 180, 160, 0.1);
+  }
+
+  .period-dot { background: var(--accent) !important; }
+  .fertile-dot { background: rgba(0, 180, 160, 0.4) !important; }
+  .peak-dot { background: var(--primary) !important; }
+
+  /* Peak Demo */
+  .peak-demo {
+    background: linear-gradient(180deg, rgba(0, 180, 160, 0.1) 0%, var(--bg-light) 100%);
+  }
+
+  .peak-icon {
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .peak-text {
+    font-size: 1rem;
+    font-weight: 700;
+    color: var(--primary);
+  }
+
+  .peak-subtext {
+    font-size: 0.7rem;
+    color: var(--text-light);
+  }
+
+  /* Stats Demo */
+  .stats-demo {
+    justify-content: flex-start;
+    padding-top: 2rem;
+  }
+
+  .stat-row {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 0.5rem 0;
+    border-bottom: 1px solid rgba(0, 180, 160, 0.1);
+  }
+
+  .stat-label {
+    font-size: 0.6rem;
+    color: var(--text-medium);
+  }
+
+  .stat-value {
+    font-size: 0.6rem;
+    font-weight: 700;
+    color: var(--primary);
+  }
+
+  /* Privacy Demo */
+  .privacy-demo {
+    background: linear-gradient(180deg, rgba(0, 180, 160, 0.05) 0%, var(--bg-light) 100%);
+  }
+
+  .privacy-icon {
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .privacy-text {
+    font-size: 0.8rem;
+    font-weight: 700;
+    color: var(--text-dark);
+    margin-bottom: 0.75rem;
+  }
+
+  .privacy-check {
+    font-size: 0.6rem;
+    color: var(--primary);
+    margin-bottom: 0.25rem;
+  }
+</style>

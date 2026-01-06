@@ -1,0 +1,173 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout title="FAQ - PulseLab" description="Frequently asked questions about PulseLab apps, privacy, and support.">
+  <section class="pt-32 pb-16 px-8">
+    <div class="container max-w-3xl">
+      <span class="section-label">Support</span>
+      <h1 class="text-4xl md:text-5xl font-extrabold text-[var(--text-dark)] mb-4">Frequently Asked Questions</h1>
+      <p class="text-lg text-[var(--text-medium)] mb-12">Everything you need to know about our apps and privacy practices.</p>
+
+      <!-- General -->
+      <div class="faq-section">
+        <h2 class="faq-category">General</h2>
+
+        <div class="faq-item">
+          <h3>What makes PulseLab different from other health apps?</h3>
+          <p>We're privacy-first by design. Your data never leaves your device — there are no servers, no accounts, and no cloud sync. We also use a one-time purchase model instead of subscriptions, meaning no recurring fees or ads.</p>
+        </div>
+
+        <div class="faq-item">
+          <h3>Do I need to create an account?</h3>
+          <p>No. Our apps work completely without accounts, logins, or email addresses. Just download and start using.</p>
+        </div>
+
+        <div class="faq-item">
+          <h3>Do the apps work offline?</h3>
+          <p>Yes! Both Sync and Ember work 100% offline. No internet connection is ever required — not for setup, not for daily use, not ever.</p>
+        </div>
+
+        <div class="faq-item">
+          <h3>Are the apps available on Android?</h3>
+          <p>Currently, our apps are iOS-only. Android versions are on our roadmap but we don't have a release date yet.</p>
+        </div>
+      </div>
+
+      <!-- Privacy -->
+      <div class="faq-section">
+        <h2 class="faq-category">Privacy</h2>
+
+        <div class="faq-item">
+          <h3>Where is my data stored?</h3>
+          <p>All data is stored locally on your device only. We have no servers, so we literally cannot access your data. When you delete the app, your data is gone forever.</p>
+        </div>
+
+        <div class="faq-item">
+          <h3>Do you sell or share my data?</h3>
+          <p>No. We can't sell or share what we don't have. Your data never leaves your device, period.</p>
+        </div>
+
+        <div class="faq-item">
+          <h3>Do you use analytics or tracking?</h3>
+          <p>No. We don't use any analytics, crash reporting, or tracking tools. We don't know how many times you open the app, what features you use, or anything else.</p>
+        </div>
+
+        <div class="faq-item">
+          <h3>What happens if I lose my phone?</h3>
+          <p>Since data is stored only on your device, losing your phone means losing your data. We recommend using your phone's built-in backup features (like iCloud Backup) which encrypt your data.</p>
+        </div>
+      </div>
+
+      <!-- Sync App -->
+      <div class="faq-section">
+        <h2 class="faq-category">Sync</h2>
+
+        <div class="faq-item">
+          <h3>How accurate are the peak day predictions?</h3>
+          <p>Sync uses scientifically-validated methods based on cycle length patterns. Accuracy improves as you log more cycles. However, predictions are estimates and should not be used as the sole method of contraception.</p>
+        </div>
+
+        <div class="faq-item">
+          <h3>Can I use Sync for contraception?</h3>
+          <p>Sync is designed to help identify fertile windows, not as a contraception method. Always consult with a healthcare provider for birth control decisions.</p>
+        </div>
+
+        <div class="faq-item">
+          <h3>How do I log my period?</h3>
+          <p>Simply tap on the calendar date when your period starts or ends. Sync will automatically calculate your cycle length and predict future periods.</p>
+        </div>
+      </div>
+
+      <!-- Ember App -->
+      <div class="faq-section">
+        <h2 class="faq-category">Ember</h2>
+
+        <div class="faq-item">
+          <h3>What symptoms can I track in Ember?</h3>
+          <p>Ember supports 20+ symptoms including hot flashes, night sweats, mood changes, sleep quality, brain fog, joint pain, and more — all designed specifically for perimenopause and menopause.</p>
+        </div>
+
+        <div class="faq-item">
+          <h3>How does the doctor report work?</h3>
+          <p>Ember can generate a PDF report summarizing your symptoms, patterns, and trends. You can share this with your healthcare provider to have more informed conversations about your health.</p>
+        </div>
+
+        <div class="faq-item">
+          <h3>Does Ember sync with Apple Health?</h3>
+          <p>Yes, Ember can read data from Apple Health (like heart rate, sleep, and activity) to provide insights. This connection is optional and all data stays on your device.</p>
+        </div>
+      </div>
+
+      <!-- Purchases -->
+      <div class="faq-section">
+        <h2 class="faq-category">Purchases & Refunds</h2>
+
+        <div class="faq-item">
+          <h3>Is there a subscription?</h3>
+          <p>No. All our apps are one-time purchases. Pay once, own forever. No subscriptions, no premium tiers, no in-app purchases.</p>
+        </div>
+
+        <div class="faq-item">
+          <h3>Can I get a refund?</h3>
+          <p>Refunds are handled by Apple through the App Store. You can request a refund at <a href="https://reportaproblem.apple.com" target="_blank" rel="noopener">reportaproblem.apple.com</a>.</p>
+        </div>
+
+        <div class="faq-item">
+          <h3>Do I get updates for free?</h3>
+          <p>Yes! All future updates are included with your purchase. No upgrade fees, ever.</p>
+        </div>
+      </div>
+
+      <!-- Contact -->
+      <div class="faq-section">
+        <h2 class="faq-category">Still Have Questions?</h2>
+        <p class="text-[var(--text-medium)]">
+          Can't find what you're looking for? Reach out to us at
+          <a href="mailto:hello@pulselab.cc" class="text-[var(--primary)] font-semibold hover:underline">hello@pulselab.cc</a>
+          and we'll get back to you as soon as possible.
+        </p>
+      </div>
+    </div>
+  </section>
+</Layout>
+
+<style>
+  .faq-section {
+    margin-bottom: 3rem;
+  }
+
+  .faq-category {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: var(--primary);
+    margin-bottom: 1.5rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid rgba(0, 180, 160, 0.2);
+  }
+
+  .faq-item {
+    margin-bottom: 1.5rem;
+  }
+
+  .faq-item h3 {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: var(--text-dark);
+    margin-bottom: 0.5rem;
+  }
+
+  .faq-item p {
+    color: var(--text-medium);
+    line-height: 1.7;
+  }
+
+  .faq-item a {
+    color: var(--primary);
+    text-decoration: none;
+  }
+
+  .faq-item a:hover {
+    text-decoration: underline;
+  }
+</style>
