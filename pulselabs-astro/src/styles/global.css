@@ -62,6 +62,12 @@ body {
   overflow-x: hidden;
 }
 
+/* Main content area */
+main {
+  min-height: 100vh;
+  width: 100%;
+}
+
 /* Animated Background */
 .bg-pattern {
   position: fixed;
@@ -122,9 +128,58 @@ body {
   width: 100%;
 }
 
-/* Ensure sections have minimum padding on all screen sizes */
-section {
-  min-width: 0;
+/* Global section padding - using !important to override Tailwind utilities */
+section, article, footer {
+  padding-left: 1.5rem !important;
+  padding-right: 1.5rem !important;
+}
+
+@media (min-width: 768px) {
+  section, article, footer {
+    padding-left: 2rem !important;
+    padding-right: 2rem !important;
+  }
+}
+
+@media (min-width: 1024px) {
+  section, article, footer {
+    padding-left: 4rem !important;
+    padding-right: 4rem !important;
+  }
+}
+
+@media (min-width: 1280px) {
+  section, article, footer {
+    padding-left: 6rem !important;
+    padding-right: 6rem !important;
+  }
+}
+
+/* Navigation padding */
+nav {
+  padding-left: 1.5rem !important;
+  padding-right: 1.5rem !important;
+}
+
+@media (min-width: 768px) {
+  nav {
+    padding-left: 2rem !important;
+    padding-right: 2rem !important;
+  }
+}
+
+@media (min-width: 1024px) {
+  nav {
+    padding-left: 4rem !important;
+    padding-right: 4rem !important;
+  }
+}
+
+@media (min-width: 1280px) {
+  nav {
+    padding-left: 6rem !important;
+    padding-right: 6rem !important;
+  }
 }
 
 /* Button Styles */
