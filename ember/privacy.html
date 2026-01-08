@@ -251,8 +251,18 @@
       <h2>Biometric Security</h2>
       <p>Ember supports Face ID and Touch ID to protect your private health data. Biometric data is handled entirely by Apple's secure enclave and is never accessible to Ember or PulseLab.</p>
 
+      <h2>Push Notifications</h2>
+      <p>Ember offers optional push notifications to help you remember to log your symptoms. If you enable notifications:</p>
+      <ul>
+        <li>Notifications are delivered through Apple Push Notification Service (APNs)</li>
+        <li>We send generic reminder messages only - no personal health data is included in notifications</li>
+        <li>Notification preferences are stored locally on your device</li>
+        <li>You can disable notifications at any time in the app Settings or iOS Settings</li>
+      </ul>
+      <p>Push notification tokens are used solely for delivering reminders and are not linked to any personal information.</p>
+
       <h2>Third-Party Services</h2>
-      <p>Ember does not use any third-party analytics, advertising, or tracking services. The app does not contain any SDKs that collect user data.</p>
+      <p>Ember uses Apple Push Notification Service (APNs) for optional reminder notifications. We do not use any third-party analytics, advertising, or tracking services. The app does not contain any SDKs that collect user data.</p>
 
       <h2>Data Deletion</h2>
       <p>Since all data is stored locally on your device, you have complete control. To delete your data:</p>
@@ -274,7 +284,7 @@
       <p><a href="mailto:hello@pulselab.cc" style="color: var(--primary);">hello@pulselab.cc</a></p>
 
       <div class="last-updated">
-        Last updated: January 5, 2026
+        Last updated: January 8, 2026
       </div>
     </div>
   </main>
